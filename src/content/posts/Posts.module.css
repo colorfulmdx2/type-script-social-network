@@ -1,0 +1,18 @@
+.addPosts {
+    display: flex;
+    flex-direction: column;
+}
+.buttonWrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.button {
+
+    height: 40px;
+    width: 20%;
+    color: white;
+    font-size: 30px;
+    background-color: forestgreen;
+}
+

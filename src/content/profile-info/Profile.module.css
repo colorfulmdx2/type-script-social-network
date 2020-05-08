@@ -1,0 +1,8 @@
+.profile {
+    display: flex;
+}
+.img {
+    border-radius: 5px;
+    height: 200px;
+    margin-right: 30px;
+}

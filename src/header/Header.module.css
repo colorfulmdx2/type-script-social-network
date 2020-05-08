@@ -1,0 +1,8 @@
+.header {
+    width: 100%;
+
+    background-color: forestgreen;
+    height: 60px;
+    margin: 5px;
+    border-radius: 5px;
+}
