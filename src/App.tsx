@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 import './container/container.css'
+
 import Header from './header/Header';
 import Navigation from "./navigation/Navigation";
 import MyPage from "./content/MyPage";
-import Dialogs from "./Dialogs/Dialogs";
+import Messages from "./messages/Messages";
 import {BrowserRouter, Route} from "react-router-dom";
-import Profile from "./content/profile-info/Profile";
 import News from "./news/News";
 import Music from "./music/Music";
 import Setting from "./setting/Setting";
@@ -18,13 +18,13 @@ function App() {
             <div className='container'>
                 <Header/>
                 <Navigation/>
-                <div className='content-container'>
-                    <Route path='/dialogs' component={Dialogs}/>
+                {/*<div className='content-container'>*/}
+                    <Route path='/dialogs' component={Messages}/>
                     <Route path='/profile' component={MyPage}></Route>
                     <Route path='/news' component={News}/>
                     <Route path='/music' component={Music}/>
                     <Route path='/setting' component={Setting}/>
-                </div>
+                {/*</div>*/}
 
 
 

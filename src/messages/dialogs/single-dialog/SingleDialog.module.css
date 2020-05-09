@@ -1,0 +1,32 @@
+
+.dialog {
+    padding-left: 15px;
+    margin: 5px;
+    font-size: 25px;
+    color: black;
+}
+.dialog a {
+    padding-right: 72%;
+
+    text-decoration: none;
+    color: black;
+}
+.dialog a:hover {
+    transition: all 0.3s ease-out;
+    font-size: 35px;
+}
+.dialog:hover {
+    transition: all 0.2s ease-out;
+    background-color: lightgreen;
+    border-radius: 5px;
+}
+
+.active {
+    background-color: lightblue;
+    border-radius: 5px;
+    font-size: 35px;
+}
+.active:hover {
+    background-color: lightblue;
+
+}
