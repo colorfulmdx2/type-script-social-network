@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 
 type SingleDialogType = {
     name: string
-    id: string
+    id: number
 
 }
 

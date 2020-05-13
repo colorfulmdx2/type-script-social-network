@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d18ab17-0d94-4f2e-8066-0c7a9f3c50cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/messages/dialogs/Dialogs.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/messages/dialogs/Dialogs.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/messages/dialogs/single-dialog/SingleDialog.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/messages/dialogs/single-dialog/SingleDialog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/messages/message/Message.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/messages/message/Message.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/messages/message/single-message/SingleMessage.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/messages/message/single-message/SingleMessage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dialogs/Dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/Messages.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/Messages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/content-container.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/header/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/MyPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/MyPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/messages/dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/dialogs/Dialogs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/messages/dialogs/single-dialog/SingleDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/dialogs/single-dialog/SingleDialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/messages/message/Message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/message/Message.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/navigation/Navigation.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/Navigation.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigation/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/Navigation.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +35,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/messages/message/single-message" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -57,14 +46,14 @@
     <property name="ts.external.directory.path" value="D:\Training_Files\React_Projects\type-script-social-network\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\setting" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\messages\message\single-message" />
       <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\messages\dialogs\single-dialog" />
       <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\messages\message" />
       <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\messeges\dialogs" />
+      <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\setting" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\setting" />
     </key>
   </component>
@@ -104,7 +93,13 @@
       <workItem from="1588913233062" duration="1550000" />
       <workItem from="1588918016718" duration="2698000" />
       <workItem from="1588920780420" duration="3062000" />
-      <workItem from="1588925275846" duration="13063000" />
+      <workItem from="1588925275846" duration="13282000" />
+      <workItem from="1588996458208" duration="59000" />
+      <workItem from="1588997057192" duration="173000" />
+      <workItem from="1589025931531" duration="30000" />
+      <workItem from="1589260132990" duration="1543000" />
+      <workItem from="1589295765198" duration="3937000" />
+      <workItem from="1589373564839" duration="1827000" />
     </task>
     <task id="LOCAL-00001" summary="#19">
       <created>1588920886900</created>
@@ -113,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588920886901</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="#19">
+      <created>1588994432297</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588994432298</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,14 +126,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="#19" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="417" y="0" key="CommitChangelistDialog2" timestamp="1588920884622">
+    <state x="417" y="0" key="CommitChangelistDialog2" timestamp="1588994430445">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="417" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1588920884622" />
-    <state x="640" y="159" key="FileChooserDialogImpl" timestamp="1588586496082">
+    <state x="417" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1588994430445" />
+    <state x="640" y="159" key="FileChooserDialogImpl" timestamp="1589293238144">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="159" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1588586496082" />
+    <state x="640" y="159" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1589293238144" />
     <state x="725" y="365" key="Github.ShareDialog" timestamp="1588581059350">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -156,10 +158,10 @@
     </state>
     <state width="1887" height="254" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1588581218940" />
     <state width="1503" height="182" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1588911476135" />
-    <state x="352" y="122" key="Vcs.Push.Dialog.v2" timestamp="1588994408370">
+    <state x="352" y="122" key="Vcs.Push.Dialog.v2" timestamp="1588994438281">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="352" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1588994408370" />
+    <state x="352" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1588994438281" />
     <state x="685" y="396" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588581121527">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

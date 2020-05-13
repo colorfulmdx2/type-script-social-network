@@ -16,6 +16,9 @@
     border-radius: 5px;
 
 }
+.navItem:active {
+    border: 1px solid firebrick;
+}
 .navigation a {
     padding-right: 100%;
     text-decoration: none;
@@ -28,4 +31,5 @@
 }
 .navItem a.activeLink {
     font-size: 25px;
+
 }

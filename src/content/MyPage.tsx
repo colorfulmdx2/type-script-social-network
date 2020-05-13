@@ -7,12 +7,18 @@ import AddedPost from "./posts/added-posts/AddedPost";
 
 
 const MyPage = () => {
+
+    let postData = [
+        {like: '12', message: 'Hello world'}
+    ]
+    let postElement = postData.map(element => <AddedPost like={element.like} message={element.message}/>)
+    
     return (
         <div className={styleContent.page}>
             <BackAvatar/>
             <Profile/>
             <Posts/>
-            <AddedPost like='12' message='Hello world'/>
+            {postElement}
 
 
 
