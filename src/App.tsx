@@ -18,16 +18,11 @@ function App() {
             <div className='container'>
                 <Header/>
                 <Navigation/>
-                {/*<div className='content-container'>*/}
-                    <Route path='/dialogs' component={Messages}/>
-                    <Route path='/profile' component={MyPage}></Route>
-                    <Route path='/news' component={News}/>
-                    <Route path='/music' component={Music}/>
-                    <Route path='/setting' component={Setting}/>
-                {/*</div>*/}
-
-
-
+                    <Route path='/dialogs' render = {() => <Messages/>}/>
+                    <Route path='/profile' render = {() => <MyPage/>}/>
+                    <Route path='/news' render = {() => News}/>
+                    <Route path='/music' render = {() => <Music/>}/>
+                    <Route path='/setting' render = {() => <Setting/>}/>
             </div>
        </BrowserRouter>
 
