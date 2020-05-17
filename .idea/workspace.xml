@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d18ab17-0d94-4f2e-8066-0c7a9f3c50cb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/navigation/friend-icon/FriendIcon.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/navigation/friend-icon/FriendIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/state.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/MyPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/MyPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/posts/Posts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/posts/Posts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/posts/added-posts/AddedPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/posts/added-posts/AddedPost.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/messages/Messages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/Messages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/messages/dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/dialogs/Dialogs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/messages/message/Message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/message/Message.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigation/Navigation.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/Navigation.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigation/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/Navigation.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +43,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/navigation/friend-icon" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -42,15 +54,15 @@
     <property name="ts.external.directory.path" value="D:\Training_Files\React_Projects\type-script-social-network\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\setting" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\navigation\friend-icon" />
       <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\messages\message\single-message" />
       <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\messages\dialogs\single-dialog" />
       <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\messages\message" />
       <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\messeges\dialogs" />
-      <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\setting" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\setting" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -96,7 +108,10 @@
       <workItem from="1589260132990" duration="1543000" />
       <workItem from="1589295765198" duration="3937000" />
       <workItem from="1589373564839" duration="1864000" />
-      <workItem from="1589443837943" duration="2063000" />
+      <workItem from="1589443837943" duration="2161000" />
+      <workItem from="1589607464863" duration="2821000" />
+      <workItem from="1589625253868" duration="3874000" />
+      <workItem from="1589706496342" duration="11451000" />
     </task>
     <task id="LOCAL-00001" summary="#19">
       <created>1588920886900</created>
@@ -119,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589375519944</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit">
+      <created>1589446205176</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589446205176</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,17 +149,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="#19" />
-    <option name="LAST_COMMIT_MESSAGE" value="#19" />
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="417" y="0" key="CommitChangelistDialog2" timestamp="1589375517011">
+    <state x="417" y="0" key="CommitChangelistDialog2" timestamp="1589446200124">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="417" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1589375517011" />
-    <state x="640" y="159" key="FileChooserDialogImpl" timestamp="1589375543611">
+    <state x="417" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1589446200124" />
+    <state x="640" y="159" key="FileChooserDialogImpl" timestamp="1589631043021">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="159" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1589375543611" />
+    <state x="640" y="159" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1589631043021" />
     <state x="725" y="365" key="Github.ShareDialog" timestamp="1588581059350">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -162,13 +185,26 @@
     </state>
     <state width="1887" height="254" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1588581218940" />
     <state width="1503" height="182" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1588911476135" />
-    <state x="352" y="122" key="Vcs.Push.Dialog.v2" timestamp="1589446183892">
+    <state x="352" y="122" key="Vcs.Push.Dialog.v2" timestamp="1589726245745">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="352" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1589446183892" />
+    <state x="352" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1589446207021" />
+    <state x="352" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589726245744" />
     <state x="685" y="396" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588581121527">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="685" y="396" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1588581121527" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/redux/state.tsx</url>
+          <line>11</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -11,16 +11,18 @@ import News from "./news/News";
 import Music from "./music/Music";
 import Setting from "./setting/Setting";
 
-
-function App() {
+{/*nameData={props.state.navigationPage.friendIconData}*/}
+function App(props: any) {
     return (
        <BrowserRouter>
             <div className='container'>
                 <Header/>
-                <Navigation/>
-                    <Route path='/dialogs' render = {() => <Messages/>}/>
-                    <Route path='/profile' render = {() => <MyPage/>}/>
-                    <Route path='/news' render = {() => News}/>
+                <Navigation friendIconData={props.state.navigationPage.friendIconData}/>
+                    <Route path='/dialogs' render = {() => <Messages messagesData={props.state.dialogsPage.messagesData}
+                                                                     dialogsData={props.state.dialogsPage.dialogsData}
+                    />}/>
+                    <Route path='/profile' render = {() => <MyPage postData={props.state.profilePage.postData}                                                                                       />}/>
+                    <Route path='/news' render = {() => <News/>}/>
                     <Route path='/music' render = {() => <Music/>}/>
                     <Route path='/setting' render = {() => <Setting/>}/>
             </div>

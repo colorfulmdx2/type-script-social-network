@@ -1,5 +1,6 @@
 import React from 'react';
 import styleAddedPost from "./AddedPost.module.css";
+
 type AddedPost = {
     like: string
     message: string

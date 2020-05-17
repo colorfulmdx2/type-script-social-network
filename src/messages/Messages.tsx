@@ -3,11 +3,11 @@ import styleDialogs from './Messages.module.css'
 import Dialogs from "./dialogs/Dialogs";
 import Message from "./message/Message";
 
-const Messages = () => {
+const Messages = (props: any) => {
     return (
         <div className={styleDialogs.messages}>
-            <Dialogs/>
-            <Message/>
+            <Dialogs dialogsData={props.dialogsData}/>
+            <Message messagesData={props.messagesData}/>
         </div>
     )
 }

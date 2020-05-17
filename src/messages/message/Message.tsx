@@ -3,16 +3,10 @@ import styleDialogs from './Message.module.css'
 import SingleMessage from "./single-message/SingleMessage";
 
 
-const Message = () => {
+const Message = (props: any) => {
 
-    let messagesData = [
-        {id: 1, messages: 'Holla'},
-        {id: 2, messages: 'Im Lolaaaaaa!!'},
-        {id: 3, messages: 'Im a pirate QUEEN!!'},
-        {id: 4, messages: 'Joking...)!!'},
 
-    ]
-    let singleMessageElement = messagesData.map(message => <SingleMessage text={message.messages}/> )
+    let singleMessageElement = props.messagesData.map((message: { messages: string; }) => <SingleMessage text={message.messages}/> )
     return (
         <div className={styleDialogs.messages}>
             {singleMessageElement}

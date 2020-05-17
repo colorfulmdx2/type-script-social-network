@@ -6,12 +6,10 @@ import Posts from "./posts/Posts";
 import AddedPost from "./posts/added-posts/AddedPost";
 
 
-const MyPage = () => {
+const MyPage = (props: any) => {
 
-    let postData = [
-        {like: '12', message: 'Hello world'}
-    ]
-    let postElement = postData.map(element => <AddedPost like={element.like} message={element.message}/>)
+
+    let postElement = props.postData.map((element: { like: string; message: string; }) => <AddedPost like={element.like} message={element.message}/>)
     
     return (
         <div className={styleContent.page}>

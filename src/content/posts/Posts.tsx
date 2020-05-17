@@ -2,7 +2,9 @@ import React from 'react';
 import stylePosts from "./Posts.module.css";
 
 const Posts = () => {
+
     return (
+
         <div className={stylePosts.posts}>
             <div className={stylePosts.addPosts}>
                 <h2>My Posts</h2>
