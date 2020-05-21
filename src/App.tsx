@@ -11,6 +11,7 @@ import News from "./news/News";
 import Music from "./music/Music";
 import Setting from "./setting/Setting";
 
+
 {/*nameData={props.state.navigationPage.friendIconData}*/}
 function App(props: any) {
     return (
@@ -21,7 +22,10 @@ function App(props: any) {
                     <Route path='/dialogs' render = {() => <Messages messagesData={props.state.dialogsPage.messagesData}
                                                                      dialogsData={props.state.dialogsPage.dialogsData}
                     />}/>
-                    <Route path='/profile' render = {() => <MyPage postData={props.state.profilePage.postData}                                                                                       />}/>
+                    <Route path='/profile' render = {() => <MyPage
+                        postData={props.state.profilePage.postData}
+                        addPost={props.addPost}
+                    />}/>
                     <Route path='/news' render = {() => <News/>}/>
                     <Route path='/music' render = {() => <Music/>}/>
                     <Route path='/setting' render = {() => <Setting/>}/>

@@ -19,6 +19,7 @@
     border-radius: 50px;
 }
 .iconImage:hover {
+
     border: 2px solid white;
     transition: 0.1s;
 }

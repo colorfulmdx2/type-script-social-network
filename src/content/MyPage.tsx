@@ -9,13 +9,13 @@ import AddedPost from "./posts/added-posts/AddedPost";
 const MyPage = (props: any) => {
 
 
-    let postElement = props.postData.map((element: { like: string; message: string; }) => <AddedPost like={element.like} message={element.message}/>)
+    let postElement = props.postData.map((element: {id: number; like: string; message: string; }) => <AddedPost id={element.id} like={element.like} message={element.message}/>)
     
     return (
         <div className={styleContent.page}>
             <BackAvatar/>
             <Profile/>
-            <Posts/>
+            <Posts addPost={props.addPost}/>
             {postElement}
 
 
