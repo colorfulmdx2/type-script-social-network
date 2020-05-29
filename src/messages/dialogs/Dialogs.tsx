@@ -10,9 +10,11 @@ const Dialogs = (props: any) => {
     let dialogElement = props.dialogsData.map((dialog: { id: number; name: string; }) => <SingleDialog id={dialog.id} name={dialog.name}/>)
 
     return (
-        <div className={styleDialogs.dialogs}>
-            {dialogElement}
-        </div>
+
+            <div className={styleDialogs.dialogs}>
+                {dialogElement}
+            </div>
+
     )
 }
 

@@ -1,6 +1,10 @@
 .messages {
-    width: 84%;
+    width: 80%;
     display: flex;
+    justify-content: flex-end;
     border-radius: 5px;
+    margin-left: 20px;
+
+
 
 }

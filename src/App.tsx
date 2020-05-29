@@ -12,10 +12,10 @@ import Music from "./music/Music";
 import Setting from "./setting/Setting";
 
 
-{/*nameData={props.state.navigationPage.friendIconData}*/}
+
 function App(props: any) {
     return (
-       <BrowserRouter>
+       /*<BrowserRouter>*/
             <div className='container'>
                 <Header/>
                 <Navigation friendIconData={props.state.navigationPage.friendIconData}/>
@@ -24,13 +24,15 @@ function App(props: any) {
                     />}/>
                     <Route path='/profile' render = {() => <MyPage
                         postData={props.state.profilePage.postData}
+                        newPostText={props.state.profilePage.newPostText}
                         addPost={props.addPost}
+                        updateNewPostText={props.updateNewPostText}
                     />}/>
                     <Route path='/news' render = {() => <News/>}/>
                     <Route path='/music' render = {() => <Music/>}/>
                     <Route path='/setting' render = {() => <Setting/>}/>
             </div>
-       </BrowserRouter>
+       /*</BrowserRouter>*/
 
     );
 }

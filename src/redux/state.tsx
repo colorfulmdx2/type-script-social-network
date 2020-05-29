@@ -1,4 +1,4 @@
-import {useState} from "react";
+
 import {rerenderEntireTree} from "../render";
 
 
@@ -16,6 +16,7 @@ let state = {
             {id: 2, like: '16', message: 'Learning React....'},
             {id: 3, like: '19', message: 'Fucked up...'}
         ],
+        newPostText: ''
     },
     dialogsPage: {
         messagesData: [
@@ -35,13 +36,19 @@ let state = {
     },
 }
 
-export let addPost = (postMessage: any) => {
+export let addPost = () => {
     let newPost = {
         id: 4,
-        message: postMessage,
+        message: state.profilePage.newPostText,
         like: '0'
     }
     state.profilePage.postData.push(newPost)
+    state.profilePage.newPostText = ''
+    rerenderEntireTree(state)
+}
+
+export let updateNewPostText = (newText:any) => {
+       state.profilePage.newPostText = newText
     rerenderEntireTree(state)
 }
 export default state

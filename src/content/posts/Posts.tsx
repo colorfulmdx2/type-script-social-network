@@ -5,10 +5,14 @@ import stylePosts from "./Posts.module.css";
 const Posts = (props: any) => {
 
     let newPostElement: any = React.createRef()
-    let addPost = () => {
-            let text = newPostElement.current.value
-            props.addPost(text)
-        newPostElement.current.value = ''
+
+    let addPostHandler = () => {
+        props.addPost()
+    }
+
+    let onPostChange = () => {
+        let text = newPostElement.current.value
+        props.updateNewPostText(text)
     }
 
     return (
@@ -16,10 +20,13 @@ const Posts = (props: any) => {
         <div className={stylePosts.posts}>
             <div className={stylePosts.addPosts}>
                 <h2>My Posts</h2>
-                <textarea ref={newPostElement}/>
+                <textarea ref={newPostElement}
+                          value={props.newPostText}
+                          onChange={onPostChange}
+                />
             </div>
             <div className={stylePosts.buttonWrapper}>
-                <input onClick={addPost} type='button' value='Send' className={stylePosts.button}/>
+                <input onClick={addPostHandler} type='button' value='Send' className={stylePosts.button}/>
             </div>
         </div>
 

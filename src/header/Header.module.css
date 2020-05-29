@@ -5,4 +5,5 @@
     height: 60px;
     margin: 5px 0 5px 0;
     border-radius: 5px;
+    box-shadow: 0 2px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
 }
