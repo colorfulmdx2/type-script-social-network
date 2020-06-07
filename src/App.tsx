@@ -24,9 +24,8 @@ function App(props: any) {
                     />}/>
                     <Route path='/profile' render = {() => <MyPage
                         postData={props.state.profilePage.postData}
-                        newPostText={props.state.profilePage.newPostText}
-                        addPost={props.addPost}
-                        updateNewPostText={props.updateNewPostText}
+                        dispatch={props.dispatch}
+
                     />}/>
                     <Route path='/news' render = {() => <News/>}/>
                     <Route path='/music' render = {() => <Music/>}/>

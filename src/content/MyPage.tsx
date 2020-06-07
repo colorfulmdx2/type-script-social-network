@@ -17,7 +17,7 @@ const MyPage = (props: any) => {
             <Profile/>
             <Posts addPost={props.addPost}
                    newPostText={props.newPostText}
-                   updateNewPostText={props.updateNewPostText}
+                   dispatch={props.dispatch}
             />
             {addedPosts}
 

@@ -33,29 +33,35 @@ let store = {
             ]
         },
     },
-    getState () {
-        return this._state
-    },
     _callSubscriber (state:any)  {
         console.log('State has been changed')
     },
-    addPost ()  {
-        let newPost = {
-            id: 4,
-            message: this._state.profilePage.newPostText,
-            like: '0'
-        }
-        this._state.profilePage.postData.push(newPost)
-        this._state.profilePage.newPostText = ''
-        this._callSubscriber(this._state)
-    },
-    updateNewPostText  (newText:any)  {
-        this._state.profilePage.newPostText = newText
-        this._callSubscriber(this._state)
+
+    getState () {
+        return this._state
     },
     subscriber  (observer:any)  {
         this._callSubscriber = observer
     },
+
+
+
+    dispatch (action:any) {
+        if (action.type === 'ADD-POST') {
+            let newPost = {
+                id: 4,
+                message: this._state.profilePage.newPostText,
+                like: '0'
+            }
+            this._state.profilePage.postData.push(newPost)
+            this._state.profilePage.newPostText = '' // dont work
+            this._callSubscriber(this._state)
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._state.profilePage.newPostText = action.newText
+            this._callSubscriber(this._state)
+        }
+    }
+
 
 
 
