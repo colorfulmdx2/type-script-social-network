@@ -7,7 +7,9 @@ const Messages = (props: any) => {
     return (
         <div className={styleDialogs.messages}>
             <Dialogs dialogsData={props.dialogsData}/>
-            <Message messagesData={props.messagesData}/>
+            <Message messagesData={props.messagesData}
+
+            />
         </div>
     )
 }

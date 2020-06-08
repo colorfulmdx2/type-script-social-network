@@ -18,6 +18,7 @@ const MyPage = (props: any) => {
             <Posts addPost={props.addPost}
                    newPostText={props.newPostText}
                    dispatch={props.dispatch}
+                   title={'My Post'}
             />
             {addedPosts}
 

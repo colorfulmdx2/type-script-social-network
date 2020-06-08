@@ -3,6 +3,8 @@ import styleDialogs from './Message.module.css'
 import SingleMessage from "./single-message/SingleMessage";
 
 
+
+
 const Message = (props: any) => {
 
 
@@ -10,6 +12,8 @@ const Message = (props: any) => {
     return (
         <div className={styleDialogs.messages}>
             {singleMessageElement}
+
+
         </div>
     )
 }
