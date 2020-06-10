@@ -13,6 +13,7 @@ const Dialogs = (props: any) => {
 
             <div className={styleDialogs.dialogs}>
                 {dialogElement}
+
             </div>
 
     )

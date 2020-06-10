@@ -21,6 +21,8 @@ function App(props: any) {
                 <Navigation friendIconData={props.state.navigationPage.friendIconData}/>
                     <Route path='/dialogs' render = {() => <Messages messagesData={props.state.dialogsPage.messagesData}
                                                                      dialogsData={props.state.dialogsPage.dialogsData}
+                                                                     store={props.store}
+
 
                     />}/>
                     <Route path='/profile' render = {() => <MyPage
