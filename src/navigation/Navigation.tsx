@@ -10,7 +10,7 @@ import styleFriendIcon from "./friend-icon/FriendIcon.module.css";
 const Navigation = (props: any) => {
 
 
-    let friendIcon =  props.friendIconData.map((icon: any) => <FriendIcon name={icon.name}/> )
+    // let friendIcon =  props.friendIconData.map((icon: any) => <FriendIcon name={icon.name}/> )
     return (
         <div className={styleNavigation.navigation}>
             <div className={styleNavigation.navItem}><NavLink to='/profile' activeClassName={styleNavigation.activeLink}>Profile</NavLink></div>
@@ -22,9 +22,9 @@ const Navigation = (props: any) => {
                 <div className={styleNavigation.title}>
                     <p>Friends</p>
                 </div>
-                <div className={styleNavigation.iconContainer}>
+                {/*<div className={styleNavigation.iconContainer}>
                     {friendIcon}
-                </div>
+                </div>*/}
             </div>
 
         </div>

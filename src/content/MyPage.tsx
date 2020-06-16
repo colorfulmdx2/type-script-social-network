@@ -4,28 +4,34 @@ import BackAvatar from "./back-avatar/BackAvatar";
 import Profile from "./profile-info/Profile";
 import Posts from "./posts/Posts";
 import AddedPost from "./posts/added-posts/AddedPost";
+import PostsContainer from "./posts/Posts-container";
+import StoreContext from "../store-context";
 
 
 const MyPage = (props: any) => {
 
 
-    let addedPosts = props.postData.map((element: {id: number; like: string; message: string; }) => <AddedPost id={element.id} like={element.like} message={element.message}/>)
-    
+    /*let addedPosts = state.profileReducer.postData.map((element: { id: number; like: string; message: string; }) =>
+        <AddedPost id={element.id} like={element.like} message={element.message}/>)*/
+
     return (
-        <div className={styleContent.page}>
-            <BackAvatar/>
-            <Profile/>
-            <Posts addPost={props.addPost}
-                   newPostText={props.newPostText}
-                   dispatch={props.dispatch}
-                   title={'My Post'}
-            />
-            {addedPosts}
-
-
-
-
-        </div>
+        <StoreContext.Consumer>
+            {store => {
+                let state = store.getState()
+                let addedPosts = state.profileReducer.postData.map((element: { id: number; like: string; message: string; }) =>
+                    <AddedPost id={element.id} like={element.like} message={element.message}/>)
+                return (
+                    <div className={styleContent.page}>
+                        <BackAvatar/>
+                        <Profile/>
+                        <PostsContainer
+                        />
+                        {addedPosts}
+                    </div>
+                )
+            }
+            }
+        </StoreContext.Consumer>
     )
 }
 

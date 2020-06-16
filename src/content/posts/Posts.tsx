@@ -1,6 +1,6 @@
 import React from 'react';
 import stylePosts from "./Posts.module.css";
-import {addPostActionCreator, updateNewPostTextActionCreator} from "../../redux/profile-reducer";
+
 
 type postsType = {
     addPost: () => void
@@ -17,14 +17,12 @@ const Posts = (props: any) => {
     let newPostElement: any = React.createRef()
 
     let addPostHandler = () => {
-        props.dispatch(addPostActionCreator())
+        props.addPost()
     }
 
-    let onPostChange = () => {
+    let onPostChangeHandler = () => {
         let text = newPostElement.current.value
-        //let action = {type: 'UPDATE-NEW-POST-TEXT', newText: text}
-        let action = updateNewPostTextActionCreator(text)
-        props.dispatch(action)
+        props.updateNewPostText(text)
 
     }
 
@@ -35,7 +33,7 @@ const Posts = (props: any) => {
                 <h2>{props.title}</h2>
                 <textarea ref={newPostElement}
                           value={props.newPostText}
-                          onChange={onPostChange}
+                          onChange={onPostChangeHandler}
                 />
             </div>
             <div className={stylePosts.buttonWrapper}>
