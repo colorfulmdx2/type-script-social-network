@@ -6,16 +6,17 @@ import SingleDialog from "./single-dialog/SingleDialog";
 
 const Dialogs = (props: any) => {
 
-    // let dialogElement = props.dialogsData.map((dialog: { id: number; name: string; }) => <SingleDialog id={dialog.id} name={dialog.name}/>)
+    let dialogsElement = props.dialogsData.map((dialog: { id: number; name: string; }) => <SingleDialog id={dialog.id} name={dialog.name}/>)
 
     return (
 
             <div className={styleDialogs.dialogs}>
-                {props.dialogElement}
+                {dialogsElement}
 
             </div>
 
     )
 }
+
 
 export default Dialogs;

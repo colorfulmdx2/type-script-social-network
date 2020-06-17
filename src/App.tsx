@@ -13,6 +13,7 @@ import Setting from "./setting/Setting";
 
 
 
+
 function App(props: any) {
 
     return (
@@ -20,7 +21,7 @@ function App(props: any) {
                 <Header/>
   {/*              <Navigation friendIconData={props.state.navigationReducer.friendIconData}/>*/}
                 <Navigation />
-                    <Route path='/dialogs' render = {() => <Messages/>}/>
+                    <Route path='/dialogs' render = {() => <Messages />}/>
                     <Route path='/profile' render = {() => <MyPage />}/>
                     <Route path='/news' render = {() => <News/>}/>
                     <Route path='/music' render = {() => <Music/>}/>

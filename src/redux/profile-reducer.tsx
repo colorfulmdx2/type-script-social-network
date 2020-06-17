@@ -18,12 +18,9 @@ const profileReducer = (state:any = initialState, action:any) => {
                 message: state.newPostText,
                 like: '0'
             }
-            state.postData.unshift(newPost)
-            state.newPostText = '' // don't work
-            return state
+            return {...state, newPostText: '', postData: [newPost, ...state.postData]}
         case UPDATE_NEW_POST_TEXT :
-            state.newPostText = action.newText
-            return state
+            return {...state, newPostText: action.newText}
         default:
             return state
     }

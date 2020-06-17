@@ -4,9 +4,9 @@ import dialogsReducer from "./dialogs-reducer";
 import navigationReducer from "./navigation-reducer";
 
 let reducers = combineReducers({
-    profileReducer: profileReducer,
-    dialogsReducer: dialogsReducer,
-    navigationReducer: navigationReducer
+    profileState: profileReducer,
+    dialogsState: dialogsReducer,
+    navigationState: navigationReducer
 })
 
 let store = createStore(reducers)
