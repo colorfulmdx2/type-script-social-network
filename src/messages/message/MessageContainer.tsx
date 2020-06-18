@@ -10,7 +10,8 @@ import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/dialo
 
 let mapStateToProps = (state:any) => {
     return {
-        messagesData: state.dialogsState.messagesData
+        messagesData: state.dialogsState.messagesData,
+        newMessageBody: state.dialogsState.newMessageBody
     }
 }
 let mapDispatchToProps = (dispatch:any) => {
