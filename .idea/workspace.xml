@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d18ab17-0d94-4f2e-8066-0c7a9f3c50cb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/redux/users-reducer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/users/Users.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/users/Users.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/users/UsersContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/messages/message/MessageContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/message/MessageContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigation/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/Navigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/news/News.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/news/News.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +40,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/messages/dialogs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/users" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -45,11 +52,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\users" />
+      <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\redux" />
       <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\messages\dialogs" />
       <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\messages\message" />
       <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\content\posts" />
-      <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\redux" />
-      <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\messages\input-message-area" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\setting" />
@@ -125,7 +132,10 @@
       <workItem from="1591873128892" duration="860000" />
       <workItem from="1591877451797" duration="25342000" />
       <workItem from="1592375119747" duration="1704000" />
-      <workItem from="1592379051639" duration="19828000" />
+      <workItem from="1592379051639" duration="20672000" />
+      <workItem from="1592544549810" duration="5151000" />
+      <workItem from="1592555151483" duration="6763000" />
+      <workItem from="1592810760355" duration="8506000" />
     </task>
     <task id="LOCAL-00001" summary="#19">
       <created>1588920886900</created>
@@ -218,17 +228,32 @@
       <option name="project" value="LOCAL" />
       <updated>1592412287560</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="WOS 48">
+      <created>1592466071563</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1592466071563</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../home-tasks/node_modules/wait-for-expect/lib/toBeInRangeMatcher.d.js" />
+        <option value="$PROJECT_DIR$/../home-tasks/node_modules/wait-for-expect/lib/waitForExpect.spec.d.js" />
+        <option value="$PROJECT_DIR$/../home-tasks/node_modules/wait-for-expect/lib/index.d.js" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="#19" />
     <MESSAGE value="Commit" />
     <MESSAGE value="WOS 45" />
-    <option name="LAST_COMMIT_MESSAGE" value="WOS 45" />
+    <MESSAGE value="WOS 48" />
+    <option name="LAST_COMMIT_MESSAGE" value="WOS 48" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2337" y="177" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591776909164">
@@ -239,16 +264,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="565" y="147" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1592407166971" />
-    <state x="417" y="0" key="CommitChangelistDialog2" timestamp="1592412284874">
+    <state x="417" y="0" key="CommitChangelistDialog2" timestamp="1592466070661">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="417" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1592412284874" />
+    <state x="417" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1592466070661" />
     <state x="2254" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1591434452773" />
     <state x="417" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589726255376" />
-    <state x="640" y="159" key="FileChooserDialogImpl" timestamp="1592320013153">
+    <state x="640" y="159" key="FileChooserDialogImpl" timestamp="1592560714951">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="159" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1592320013153" />
+    <state x="640" y="159" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1592560714951" />
     <state x="2432" y="103" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1591855871674" />
     <state x="725" y="365" key="Github.ShareDialog" timestamp="1588581059350">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -274,10 +299,10 @@
     </state>
     <state width="1887" height="347" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1592320018228" />
     <state width="1503" height="253" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1590722609305" />
-    <state x="352" y="122" key="Vcs.Push.Dialog.v2" timestamp="1592412289089">
+    <state x="352" y="122" key="Vcs.Push.Dialog.v2" timestamp="1592466073148">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="352" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1592412289089" />
+    <state x="352" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1592466073148" />
     <state x="2202" y="29" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1591434458261" />
     <state x="352" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589726257997" />
     <state x="685" y="396" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588581121527">
