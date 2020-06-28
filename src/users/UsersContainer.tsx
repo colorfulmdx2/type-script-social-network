@@ -4,7 +4,6 @@ import {connect} from "react-redux";
 import {followAC, setUsersAC, unFollowAC} from "../redux/users-reducer";
 
 let mapStateToProps = (state:any) => {
-    debugger
     return {
         users: state.usersState.users
     }

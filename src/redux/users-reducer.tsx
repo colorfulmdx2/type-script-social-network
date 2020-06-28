@@ -10,10 +10,11 @@ export type LocationType = {
 export type UsersType = {
     id: string
     followed: boolean
-    fullName: string
+    name: string
     status: string
     location: LocationType
     photoUrl: string
+    photos: any
 }
 
 let initialState = {

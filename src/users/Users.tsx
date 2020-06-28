@@ -1,35 +1,17 @@
 import React from 'react';
 import styleUsers from './Users.module.css'
 import {UsersType} from "../redux/users-reducer";
+import axios from 'axios'
+import userPhoto from '../assets/images/user.png'
 
 const Users = (props:any) => {
     if (props.users.length === 0) {
-        props.setUsers([
-            {
-                id: 1,
-                photoUrl: 'https://vignette.wikia.nocookie.net/anime-soul/images/b/b2/62.jpg/revision/latest/top-crop/width/360/height/450?cb=20170410121834&path-prefix=ru',
-                followed: false,
-                fullName: 'Dmitry',
-                status: 'im a boss',
-                location: {city: 'Minsk', country: 'Belarus'}
-            },
-            {
-                id: 2,
-                photoUrl: 'https://vignette.wikia.nocookie.net/anime-soul/images/b/b2/62.jpg/revision/latest/top-crop/width/360/height/450?cb=20170410121834&path-prefix=ru',
-                followed: true,
-                fullName: 'Viktor',
-                status: 'Hi there',
-                location: {city: 'Moscow', country: 'Russia'}
-            },
-            {
-                id: 3,
-                photoUrl: 'https://vignette.wikia.nocookie.net/anime-soul/images/b/b2/62.jpg/revision/latest/top-crop/width/360/height/450?cb=20170410121834&path-prefix=ru',
-                followed: false,
-                fullName: 'Slava',
-                status: 'How ure doing',
-                location: {city: 'Kiev', country: 'Ukraine'}
-            },
-        ])
+
+        axios.get('https://social-network.samuraijs.com/api/1.0/users').then((response:any) => {
+            debugger
+            props.setUsers(response.data.items)
+        })
+
     }
 
     return (
@@ -38,7 +20,9 @@ const Users = (props:any) => {
                 props.users.map((u:UsersType) => <div key={u.id}>
                     <span>
                         <div>
-                            <img src={u.photoUrl}/>
+                            <img src={u.photos.small !== null
+                                ? u.photos.small
+                                : userPhoto}/>
                         </div>
                          <div>
                              {
@@ -51,12 +35,12 @@ const Users = (props:any) => {
                     </span>
                     <span>
                         <span>
-                            <div>{u.fullName}</div>
+                            <div>{u.name}</div>
                             <div>{u.status}</div>
                         </span>
                         <span>
-                            <div>{u.location.city}</div>
-                            <div>{u.location.country}</div>
+                            <div>{'u.location.city'}</div>
+                            <div>{'u.location.country'}</div>
                         </span>
                     </span>
                 </div>)
