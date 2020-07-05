@@ -1,6 +1,8 @@
 const FOLLOW = 'FOLLOW'
-const UN_FOLLOW = 'UN-FOLLOW'
+const UN_FOLLOW = 'UN_FOLLOW'
 const SET_USERS = 'SET_USERS'
+const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE'
+const SET_TOTAL_USERS = 'SET_TOTAL_USERS'
 
 export type LocationType = {
     city: string
@@ -18,10 +20,16 @@ export type UsersType = {
 }
 
 let initialState = {
-    users: []
+    users: [] as UsersType[],
+    pageSize: 5,
+    totalUsersCount: 0,
+    currentPage: 1
 }
 
-const usersReducer = (state:any = initialState, action:any) => {
+
+type InitStateType = typeof initialState
+
+const usersReducer = (state: InitStateType = initialState, action:any): InitStateType => {
     switch (action.type) {
         case FOLLOW:
             return {
@@ -46,16 +54,23 @@ const usersReducer = (state:any = initialState, action:any) => {
             }
 
         case SET_USERS: {
-            return {...state, users: [...state.users, ...action.users]}
+            return {...state, users: action.users}
+        }
+        case SET_CURRENT_PAGE: {
+            return {...state, currentPage: action.currentPage}
+        }
+        case SET_TOTAL_USERS: {
+            return {...state, totalUsersCount: action.count}
         }
         default:
             return state
     }
 }
 
-export const followAC = (userId: any) => ({type: FOLLOW, userId})
-export const unFollowAC = (userId: any) => ({type: UN_FOLLOW, userId})
-export const setUsersAC = (users: any) => ({type: SET_USERS, users})
-
+export const followAC = (userId: string) => ({type: FOLLOW, userId})
+export const unFollowAC = (userId: string) => ({type: UN_FOLLOW, userId})
+export const setUsersAC = (users: UsersType) => ({type: SET_USERS, users})
+export const setCurrentPageAC = (currentPage: number) => ({type: SET_CURRENT_PAGE, currentPage})
+export const setUsersTotalCountAC = (totalUsersCount: number) => ({type: SET_TOTAL_USERS, count: totalUsersCount})
 
 export default usersReducer

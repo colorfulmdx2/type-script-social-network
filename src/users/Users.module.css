@@ -3,3 +3,8 @@
     min-height: 400px;
 
 }
+
+.selectedPage {
+    font-weight: bold;
+    color: red;
+}

@@ -3,13 +3,14 @@ import {addPostActionCreator, updateNewPostTextActionCreator} from "../../redux/
 import Posts from "./Posts";
 
 import {connect} from "react-redux";
+import {AppStateType} from "../../redux/redux-store";
 
 
 
 
 
 
-let mapStateToProps = (state:any) => {
+let mapStateToProps = (state: AppStateType) => {
     return {
         newPostText: state.profileState.newPostText,
         postData: state.profileState.postData

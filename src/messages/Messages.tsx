@@ -10,7 +10,7 @@ import SingleMessage from "./message/single-message/SingleMessage";
 import MessageContainer from "./message/MessageContainer";
 import DialogsContainer from "./dialogs/DialogsContainer";
 
-const Messages = (props:any) => {
+const Messages = () => {
    return (
        <div>
            <DialogsContainer />

@@ -21,7 +21,9 @@ let initialState = {
     newMessageBody: ''
 }
 
-const dialogsReducer = (state:any = initialState, action:any) => {
+type InitStateType = typeof initialState
+
+const dialogsReducer = (state:InitStateType = initialState, action:any): InitStateType => {
     switch (action.type) {
         case UPDATE_NEW_MESSAGE_BODY:
             state.newMessageBody = action.body
