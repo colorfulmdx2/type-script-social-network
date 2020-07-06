@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d18ab17-0d94-4f2e-8066-0c7a9f3c50cb" name="Default Changelist" comment="WOS 55">
+    <list default="true" id="6d18ab17-0d94-4f2e-8066-0c7a9f3c50cb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/images/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Preloader/Preloader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/MyPageContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/posts/Posts-container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/posts/Posts-container.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/messages/Messages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/Messages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/messages/dialogs/DialogsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/dialogs/DialogsContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/messages/message/MessageContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/message/MessageContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/dialogs-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogs-reducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/MyPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/MyPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/profile-info/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/profile-info/Profile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/users/Users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/Users.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/Users.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/UsersContainer.tsx" afterDir="false" />
     </list>
@@ -46,7 +46,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/users" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/content" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -59,11 +59,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\content" />
       <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\users" />
       <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\redux" />
       <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\messages\dialogs" />
       <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\messages\message" />
-      <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\content\posts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Training_Files\React_Projects\type-script-social-network\src\setting" />
@@ -221,7 +221,7 @@
       <workItem from="1593423291022" duration="3126000" />
       <workItem from="1593768997392" duration="16631000" />
       <workItem from="1593885321622" duration="47000" />
-      <workItem from="1593931044612" duration="3256000" />
+      <workItem from="1593931044612" duration="24544000" />
     </task>
     <task id="LOCAL-00001" summary="#19">
       <created>1588920886900</created>
@@ -335,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593343996522</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="WOS 56">
+      <created>1593935970794</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1593935970794</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +364,8 @@
     <MESSAGE value="WOS 49" />
     <MESSAGE value="WOS 51" />
     <MESSAGE value="WOS 55" />
-    <option name="LAST_COMMIT_MESSAGE" value="WOS 55" />
+    <MESSAGE value="WOS 56" />
+    <option name="LAST_COMMIT_MESSAGE" value="WOS 56" />
   </component>
   <component name="WindowStateProjectService">
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1593333053883">
@@ -373,11 +381,11 @@
     </state>
     <state x="565" y="147" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1592407166971" />
     <state x="2372" y="79" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1593933572272" />
-    <state x="2254" y="0" key="CommitChangelistDialog2" timestamp="1593885001649">
+    <state x="2254" y="0" key="CommitChangelistDialog2" timestamp="1593935967295">
       <screen x="1920" y="0" width="1536" height="824" />
     </state>
     <state x="417" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1593343993452" />
-    <state x="2254" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1593885001649" />
+    <state x="2254" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1593935967295" />
     <state x="417" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589726255376" />
     <state x="640" y="159" key="FileChooserDialogImpl" timestamp="1593885367974">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -408,11 +416,11 @@
     </state>
     <state width="1887" height="347" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1593342195384" />
     <state width="1887" height="347" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1593420152328" />
-    <state x="2202" y="29" key="Vcs.Push.Dialog.v2" timestamp="1593885025222">
+    <state x="2202" y="29" key="Vcs.Push.Dialog.v2" timestamp="1593935972448">
       <screen x="1920" y="0" width="1536" height="824" />
     </state>
     <state x="352" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1593343997380" />
-    <state x="2202" y="29" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1593885025222" />
+    <state x="2202" y="29" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1593935972448" />
     <state x="352" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589726257997" />
     <state x="685" y="396" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588581121527">
       <screen x="0" y="0" width="1920" height="1040" />
