@@ -19,7 +19,7 @@ function App(props: any) {
             {/*              <Navigation friendIconData={props.state.navigationReducer.friendIconData}/>*/}
             <Navigation/>
             <Route path='/dialogs' render={() => <Messages/>}/>
-            <Route path='/profile' render={() => <MyPageContainer/>}/>
+            <Route path='/profile/:userId?' render={() => <MyPageContainer/>}/>
             <Route path='/users' render={() => <UsersContainer/>}/>
             <Route path='/music' render={() => <Music/>}/>
             <Route path='/setting' render={() => <Setting/>}/>

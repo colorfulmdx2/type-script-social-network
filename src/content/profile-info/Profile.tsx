@@ -9,7 +9,7 @@ const Profile = (props:profileProps) => {
     if (!props.profile) {
         return <Preloader/>
     }
-    debugger
+
     return (
         <div className={styleProfile.profile}>
             <img className={styleProfile.img} src="https://user-life.com/uploads/posts/2018-08/1535608847_kak-udalit-avatarku-ubrat-postavit-sdelat-zagruzit-dobavit-foto-vkontakte-dlya-telegramma-skaypa-vayber-diskorda.jpg" alt=""/>
