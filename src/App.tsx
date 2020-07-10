@@ -9,13 +9,14 @@ import Music from "./music/Music";
 import Setting from "./setting/Setting";
 import UsersContainer from "./users/UsersContainer";
 import MyPageContainer from "./content/MyPageContainer";
+import HeaderContainer from "./header/HeaderContainer";
 
 
 function App(props: any) {
 
     return (
         <div className='container'>
-            <Header/>
+            <HeaderContainer/>
             {/*              <Navigation friendIconData={props.state.navigationReducer.friendIconData}/>*/}
             <Navigation/>
             <Route path='/dialogs' render={() => <Messages/>}/>
