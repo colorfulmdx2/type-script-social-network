@@ -6,7 +6,6 @@ import {CommonAuthUsersPropsType} from "./HeaderContainer";
 
 
 function Header(props: CommonAuthUsersPropsType) {
-    debugger
     return (
         <div className={styleHeader.header}>
             <Logo/>
