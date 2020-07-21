@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import './container/container.css'
-import Header from './header/Header';
 import Navigation from "./navigation/Navigation";
 import Messages from "./messages/Messages";
 import {Route} from "react-router-dom";
@@ -10,6 +9,7 @@ import Setting from "./setting/Setting";
 import UsersContainer from "./users/UsersContainer";
 import MyPageContainer from "./content/MyPageContainer";
 import HeaderContainer from "./header/HeaderContainer";
+import Login from "./login/Login";
 
 
 function App(props: any) {
@@ -24,6 +24,7 @@ function App(props: any) {
             <Route path='/users' render={() => <UsersContainer/>}/>
             <Route path='/music' render={() => <Music/>}/>
             <Route path='/setting' render={() => <Setting/>}/>
+            <Route path='/login' render={() => <Login/>}/>
         </div>
     );
 }

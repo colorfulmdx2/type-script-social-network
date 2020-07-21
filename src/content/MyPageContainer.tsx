@@ -1,16 +1,15 @@
 import React from 'react';
 import MyPage from "./MyPage";
-import axios from "axios";
 import {connect} from "react-redux";
 import {AppStateType} from "../redux/redux-store";
-import {setUserProfile} from "../redux/profile-reducer";
-import {withRouter, RouteComponentProps} from "react-router-dom";
+import {getUserProfile} from "../redux/profile-reducer";
+import {withRouter, RouteComponentProps, Redirect} from "react-router-dom";
 
 type PathParamsType = {
     userId: any
 }
 export type ProfilePropsDispatchType = {
-    setUserProfile: (arg: any) => void
+    getUserProfile: (userId: any) => void
 }
 export type ProfilePropsStateType = ReturnType<typeof mapStateToProps>
 
@@ -25,15 +24,13 @@ class MyPageContainer extends React.Component<PropsType> {
         if (!userId) {
             userId = 2
         }
-        axios.get(`https://social-network.samuraijs.com/api/1.0/profile/` + userId)
-            .then((response: any) => {
-
-                this.props.setUserProfile(response.data)
-
-            })
+        this.props.getUserProfile(userId)
     }
 
     render() {
+        if (!this.props.isAuth) {
+            return <Redirect to='/login'/>
+        }
         return (
             <MyPage {...this.props} profile={this.props.profile}/>
         )
@@ -43,13 +40,14 @@ class MyPageContainer extends React.Component<PropsType> {
 
 let mapStateToProps = (state: AppStateType) => {
     return ({
-        profile: state.profileState.profile
+        profile: state.profileState.profile,
+        isAuth: state.auth.isAuth
     })
 }
 
- let withUrlDataContainerComponent = withRouter<any, any>(MyPageContainer)
+let withUrlDataContainerComponent = withRouter<any, any>(MyPageContainer)
 
-export default connect(mapStateToProps, {setUserProfile})(withUrlDataContainerComponent);
+export default connect(mapStateToProps, {getUserProfile})(withUrlDataContainerComponent);
 
 
 

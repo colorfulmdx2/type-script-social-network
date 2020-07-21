@@ -28,13 +28,23 @@ export const usersAPI = {
             .then(response => {
                 return response.data
             })
+    },
+    getProfile(userId:any) {
+       return  instance.get(`profile/` + userId)
+    }
+}
+
+export const authAPI = {
+    me() {
+       return instance.get(`auth/me`,
+            {withCredentials: true})
     }
 }
 
 
-export const follow = (currentPage = 1, pageSize = 10) => {
-    return instance.get(`follow?page=${currentPage}&count=${pageSize}`)
-        .then(response => {
-            return response.data
-        })
-}
+// export const follow = (currentPage = 1, pageSize = 10) => {
+//     return instance.get(`follow?page=${currentPage}&count=${pageSize}`)
+//         .then(response => {
+//             return response.data
+//         })
+// }
