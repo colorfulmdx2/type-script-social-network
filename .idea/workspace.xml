@@ -2,21 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d18ab17-0d94-4f2e-8066-0c7a9f3c50cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/login/Login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HOC/WithAuthRedirect.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/content/MyPageContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/MyPageContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/header/HeaderContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/header/HeaderContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/posts/Posts-container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/posts/Posts-container.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/messages/Messages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/Messages.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/auth-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-reducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/dialogs-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogs-reducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/Users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/UsersContainer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +226,7 @@
       <workItem from="1594456445063" duration="4257000" />
       <workItem from="1594480707699" duration="4255000" />
       <workItem from="1594625610422" duration="5614000" />
-      <workItem from="1595221175157" duration="16161000" />
+      <workItem from="1595221175157" duration="27089000" />
     </task>
     <task id="LOCAL-00001" summary="#19">
       <created>1588920886900</created>
@@ -394,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594649122975</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="WOS 68">
+      <created>1595306824577</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1595306824577</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +425,8 @@
     <MESSAGE value="WOS 62" />
     <MESSAGE value="WOS 63" />
     <MESSAGE value="WOS 64" />
-    <option name="LAST_COMMIT_MESSAGE" value="WOS 64" />
+    <MESSAGE value="WOS 68" />
+    <option name="LAST_COMMIT_MESSAGE" value="WOS 68" />
   </component>
   <component name="WindowStateProjectService">
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1593333053883">
@@ -439,11 +442,11 @@
     </state>
     <state x="565" y="147" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1592407166971" />
     <state x="2372" y="79" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1593933572272" />
-    <state x="417" y="0" key="CommitChangelistDialog2" timestamp="1594649120464">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2254" y="0" key="CommitChangelistDialog2" timestamp="1595306820686">
+      <screen x="1920" y="0" width="1536" height="824" />
     </state>
     <state x="417" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1594649120464" />
-    <state x="2254" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1594219573957" />
+    <state x="2254" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1595306820686" />
     <state x="417" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589726255376" />
     <state x="640" y="159" key="FileChooserDialogImpl" timestamp="1594649153618">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -474,11 +477,11 @@
     </state>
     <state width="1887" height="347" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1593342195384" />
     <state width="1887" height="347" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1593420152328" />
-    <state x="352" y="122" key="Vcs.Push.Dialog.v2" timestamp="1594649123480">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2202" y="29" key="Vcs.Push.Dialog.v2" timestamp="1595306835092">
+      <screen x="1920" y="0" width="1536" height="824" />
     </state>
     <state x="352" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1594649123480" />
-    <state x="2202" y="29" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1594219576868" />
+    <state x="2202" y="29" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1595306835092" />
     <state x="352" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589726257997" />
     <state x="2165" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1594626084398">
       <screen x="1920" y="0" width="1536" height="824" />
@@ -496,9 +499,10 @@
       <screen x="1920" y="0" width="1536" height="824" />
     </state>
     <state x="1429" y="124" width="1465" height="880" key="dock-window-2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1592407875068" />
-    <state x="2181" y="-2" width="1009" height="1470" key="search.everywhere.popup" timestamp="1589988809585">
+    <state x="2182" y="-2" width="1009" height="1470" key="search.everywhere.popup" timestamp="1595314928920">
       <screen x="1920" y="0" width="1536" height="824" />
     </state>
+    <state x="2182" y="-2" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1595314928920" />
     <state x="2181" y="-2" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1589988809585" />
   </component>
   <component name="XDebuggerManager">
@@ -508,6 +512,12 @@
           <url>file://$PROJECT_DIR$/src/redux/profile-reducer.test.ts</url>
           <line>2</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/redux/dialogs-reducer.tsx</url>
+          <line>5</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

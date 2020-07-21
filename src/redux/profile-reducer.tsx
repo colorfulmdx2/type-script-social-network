@@ -13,6 +13,19 @@ let initialState = {
     newPostText: '',
     profile: null
 }
+type AddPostType = {
+    type: typeof ADD_POST
+}
+type UpdateNewPostTextType = {
+    type: typeof UPDATE_NEW_POST_TEXT,
+    newText: string
+}
+type SetUserProfileType = {
+    type: typeof SET_USER_PROFILE,
+    profile: any
+}
+
+type ProfileReducerActionsType = AddPostType | UpdateNewPostTextType | SetUserProfileType
 
 type InitStateType = typeof initialState
 
@@ -35,18 +48,18 @@ const profileReducer = (state: InitStateType = initialState, action:any): InitSt
 }
 
 
-export const addPostActionCreator = () => {
+export const addPost = ():ProfileReducerActionsType => {
     return {
         type: ADD_POST
     }
 }
-export const updateNewPostTextActionCreator = (text: string) => {
+export const updateNewPostText = (text: string):ProfileReducerActionsType => {
     return {
         type: UPDATE_NEW_POST_TEXT,
         newText: text
     }
 }
-const setUserProfile = (profile: any) => {
+const setUserProfile = (profile: any):ProfileReducerActionsType => {
     return ({
         type: SET_USER_PROFILE, profile
     })

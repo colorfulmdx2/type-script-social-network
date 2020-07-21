@@ -1,6 +1,7 @@
 import React from 'react';
 import MessageContainer from "./message/MessageContainer";
 import DialogsContainer from "./dialogs/DialogsContainer";
+import WithAuthRedirect from "../HOC/WithAuthRedirect";
 
 const Messages = () => {
    return (
@@ -12,5 +13,5 @@ const Messages = () => {
 }
 
 
-export default Messages;
+export default  WithAuthRedirect(Messages);
 

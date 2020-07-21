@@ -21,6 +21,16 @@ let initialState = {
     newMessageBody: ''
 }
 
+type SendMessageCreatorType = {
+    type: typeof SEND_MESSAGE
+}
+type UpdateNewMessageBodyCreatorType = {
+    type: typeof UPDATE_NEW_MESSAGE_BODY
+    body: string
+}
+
+type DialogReducerActionsType = SendMessageCreatorType | UpdateNewMessageBodyCreatorType
+
 type InitStateType = typeof initialState
 
 const dialogsReducer = (state:InitStateType = initialState, action:any): InitStateType => {
@@ -36,7 +46,7 @@ const dialogsReducer = (state:InitStateType = initialState, action:any): InitSta
     }
 }
 
-export const sendMessageCreator = () => ({type: SEND_MESSAGE})
-export const updateNewMessageBodyCreator = (body:string) => ({type: UPDATE_NEW_MESSAGE_BODY, body: body})
+export const sendMessageCreator = (): DialogReducerActionsType => ({type: SEND_MESSAGE})
+export const updateNewMessageBodyCreator = (body:string): DialogReducerActionsType => ({type: UPDATE_NEW_MESSAGE_BODY, body: body})
 
 export default dialogsReducer

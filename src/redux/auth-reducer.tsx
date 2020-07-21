@@ -11,6 +11,13 @@ let initialState = {
 }
 
 
+type SetAuthUserDataActionType = {
+    type: typeof SET_USER_DATA
+    data: DataType
+}
+type AuthUserDataActionType = SetAuthUserDataActionType
+
+
 type InitStateType = typeof initialState
 
 const authReducer = (state: InitStateType = initialState, action: any): InitStateType => {
@@ -24,7 +31,13 @@ const authReducer = (state: InitStateType = initialState, action: any): InitStat
     }
 }
 
-export const setAuthUserData = (userId: any, email: any, login: any) => (
+type DataType = {
+    userId: number
+    email: string
+    login: string
+}
+
+export const setAuthUserData = (userId: number, email: string, login: string): AuthUserDataActionType => (
     {
         type: SET_USER_DATA,
         data: {
@@ -36,7 +49,7 @@ export const setAuthUserData = (userId: any, email: any, login: any) => (
 )
 
 export const getAuthUserData = () => (dispatch: any) => {
-
+            //type
     authAPI.me()
         .then((response: any) => {
             if (response.data.resultCode === 0) {

@@ -1,4 +1,4 @@
-import profileReducer, {addPostActionCreator, updateNewPostTextActionCreator} from "./profile-reducer";
+import profileReducer, {addPost, updateNewPostText} from "./profile-reducer";
 
 test('add post', () => {
 
@@ -10,7 +10,7 @@ test('add post', () => {
         ],
         newPostText: ''
     }
-    const action = addPostActionCreator();
+    const action = addPost();
 
     const endState = profileReducer(startState, action)
 
@@ -23,7 +23,7 @@ test('update new post text', () => {
     const startState: any = {
         newPostText: ''
     }
-    const action = updateNewPostTextActionCreator('xxx');
+    const action = updateNewPostText('xxx');
 
     const endState = profileReducer(startState, action)
 
