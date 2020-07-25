@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d18ab17-0d94-4f2e-8066-0c7a9f3c50cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/HOC/WithAuthRedirect.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/profile-status/ProfileStatus.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/MyPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/MyPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/content/MyPageContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/MyPageContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/posts/Posts-container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/posts/Posts-container.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/messages/Messages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/Messages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/auth-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/dialogs-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogs-reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-reducer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +220,8 @@
       <workItem from="1594456445063" duration="4257000" />
       <workItem from="1594480707699" duration="4255000" />
       <workItem from="1594625610422" duration="5614000" />
-      <workItem from="1595221175157" duration="27089000" />
+      <workItem from="1595221175157" duration="29514000" />
+      <workItem from="1595651358646" duration="4962000" />
     </task>
     <task id="LOCAL-00001" summary="#19">
       <created>1588920886900</created>
@@ -396,7 +391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595306824577</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="WOS 68">
+      <created>1595350503070</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1595350503077</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,16 +444,16 @@
     </state>
     <state x="565" y="147" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1592407166971" />
     <state x="2372" y="79" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1593933572272" />
-    <state x="2254" y="0" key="CommitChangelistDialog2" timestamp="1595306820686">
+    <state x="2254" y="0" key="CommitChangelistDialog2" timestamp="1595350501109">
       <screen x="1920" y="0" width="1536" height="824" />
     </state>
     <state x="417" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1594649120464" />
-    <state x="2254" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1595306820686" />
+    <state x="2254" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1595350501109" />
     <state x="417" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589726255376" />
-    <state x="640" y="159" key="FileChooserDialogImpl" timestamp="1594649153618">
+    <state x="640" y="159" key="FileChooserDialogImpl" timestamp="1595516156352">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="159" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1594649153618" />
+    <state x="640" y="159" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1595516156352" />
     <state x="2432" y="103" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1594219654509" />
     <state x="725" y="365" key="Github.ShareDialog" timestamp="1588581059350">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -477,11 +479,11 @@
     </state>
     <state width="1887" height="347" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1593342195384" />
     <state width="1887" height="347" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1593420152328" />
-    <state x="2202" y="29" key="Vcs.Push.Dialog.v2" timestamp="1595306835092">
+    <state x="2202" y="29" key="Vcs.Push.Dialog.v2" timestamp="1595350504070">
       <screen x="1920" y="0" width="1536" height="824" />
     </state>
     <state x="352" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1594649123480" />
-    <state x="2202" y="29" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1595306835092" />
+    <state x="2202" y="29" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1595350504070" />
     <state x="352" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589726257997" />
     <state x="2165" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1594626084398">
       <screen x="1920" y="0" width="1536" height="824" />
@@ -516,7 +518,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/redux/dialogs-reducer.tsx</url>
           <line>5</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

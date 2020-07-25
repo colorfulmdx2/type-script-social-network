@@ -2,8 +2,8 @@ import React from 'react';
 import styleContent from "./MyPage.module.css";
 import BackAvatar from "./back-avatar/BackAvatar";
 import Profile from "./profile-info/Profile";
-import AddedPost from "./posts/added-posts/AddedPost";
 import PostsContainer from "./posts/Posts-container";
+import ProfileStatus from "./profile-status/ProfileStatus";
 
 export type profileProps = {
     profile: any
@@ -14,7 +14,8 @@ const MyPage = (props: profileProps) => {
               
                 return (
                     <div className={styleContent.page}>
-                        <BackAvatar/>
+                       {/* <BackAvatar/>*/}
+                       <ProfileStatus status={'Hello Bitch!'}/>
                         <Profile profile={props.profile}/>
                         <PostsContainer />
 
