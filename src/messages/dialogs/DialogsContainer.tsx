@@ -10,12 +10,6 @@ let mapStateToProps = (state:AppStateType) => {
         dialogsData: state.dialogsState.dialogsData
     }
 }
-let mapDispatchToProps = (dispatch:any) => {
-    return {
 
-    }
-}
+export default connect(mapStateToProps, {}) (Dialogs);
 
-
-
-export default connect(mapStateToProps, mapDispatchToProps) (Dialogs);

@@ -1,4 +1,4 @@
-import dialogsReducer, {sendMessageCreator, updateNewMessageBodyCreator} from "./dialogs-reducer";
+import dialogsReducer, {sendMessageCreator, updateNewMessageBody} from "./dialogs-reducer";
 
 test('send message', () => {
 
@@ -24,7 +24,7 @@ test('update new message body', () => {
     const startState: any = {
         newMessageBody: ''
     }
-    const action = updateNewMessageBodyCreator('xxx');
+    const action = updateNewMessageBody('xxx');
 
     const endState = dialogsReducer(startState, action)
 

@@ -5,22 +5,24 @@ import Profile from "./profile-info/Profile";
 import PostsContainer from "./posts/Posts-container";
 import ProfileStatus from "./profile-status/ProfileStatus";
 
-export type profileProps = {
+export type MyPagePropsType = {
     profile: any
+    status: string
+    updateStatus: (status: string) => void
 }
 
-const MyPage = (props: profileProps) => {
+const MyPage = (props: MyPagePropsType) => {
+    return (
+        <div className={styleContent.page}>
+            {/* <BackAvatar/>*/}
+            <ProfileStatus status={props.status}
+                           updateStatus={props.updateStatus}
+            />
+            <Profile profile={props.profile}/>
+            <PostsContainer/>
 
-              
-                return (
-                    <div className={styleContent.page}>
-                       {/* <BackAvatar/>*/}
-                       <ProfileStatus status={'Hello Bitch!'}/>
-                        <Profile profile={props.profile}/>
-                        <PostsContainer />
-
-                    </div>
-                )
+        </div>
+    )
 
 }
 
@@ -28,15 +30,3 @@ const MyPage = (props: profileProps) => {
 export default MyPage;
 
 
-
-/*const MyPage = (props: any) => {
-    return (
-        <div className={styleContent.page}>
-            <BackAvatar/>
-            <Profile/>
-            <PostsContainer
-            />
-            {addedPosts}
-        </div>
-    )
-}*/

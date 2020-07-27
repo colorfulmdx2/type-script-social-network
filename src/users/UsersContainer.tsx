@@ -11,8 +11,8 @@ import Users from "./Users";
 import Preloader from "../components/common/Preloader/Preloader";
 
 export type UsersPropsDispatch = {
-    follow: (userId: string) => void
-    unFollow: (userId: string) => void
+    follow: (userId: number) => void
+    unFollow: (userId: number) => void
     setCurrentPage: (pageNumber: number) => void
     toggleFollowingProgress: (isFetching: boolean, userId: any) => void
     getUsers: (currentPage: number, pageSize: number) => any

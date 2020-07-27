@@ -1,10 +1,12 @@
 import React from 'react';
 import styleProfile from './Profile.module.css'
-import {profileProps} from "../MyPage";
 import Preloader from "../../components/common/Preloader/Preloader";
 
+type ProfilePropsType = {
+    profile: any
+}
 
-const Profile = (props:profileProps) => {
+const Profile = (props:ProfilePropsType) => {
 
     if (!props.profile) {
         return <Preloader/>

@@ -30,7 +30,19 @@ export const usersAPI = {
             })
     },
     getProfile(userId:any) {
-       return  instance.get(`profile/` + userId)
+       return  profileAPI.getProfile(userId)
+    }
+}
+
+export const profileAPI = {
+    getProfile(userId:any) {
+        return  instance.get(`profile/` + userId)
+    },
+    getStatus(userId:any) {
+        return instance.get(`profile/status/` + userId)
+    },
+    updateStatus(status:any) {
+        return instance.put(`profile/status/`, {status: status})
     }
 }
 
@@ -42,9 +54,3 @@ export const authAPI = {
 }
 
 
-// export const follow = (currentPage = 1, pageSize = 10) => {
-//     return instance.get(`follow?page=${currentPage}&count=${pageSize}`)
-//         .then(response => {
-//             return response.data
-//         })
-// }

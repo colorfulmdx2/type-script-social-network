@@ -1,7 +1,7 @@
 import React, {ChangeEvent} from 'react';
 import {connect} from "react-redux";
 import Message from "./Message";
-import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/dialogs-reducer";
+import {sendMessageCreator, updateNewMessageBody} from "../../redux/dialogs-reducer";
 import {AppStateType} from "../../redux/redux-store";
 
 
@@ -22,7 +22,7 @@ let mapDispatchToProps = (dispatch:any) => {
         },
         onNewMessageChange: (e: ChangeEvent<HTMLInputElement>) => {
             let body = e.target.value
-            dispatch(updateNewMessageBodyCreator(body))
+            dispatch(updateNewMessageBody(body))
         },
 
     }

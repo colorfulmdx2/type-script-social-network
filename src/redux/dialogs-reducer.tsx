@@ -1,7 +1,23 @@
-import profileReducer from "./profile-reducer";
-
+//----------------------------------------------------------------------------------------------------------------------
 const UPDATE_NEW_MESSAGE_BODY = 'UPDATE_NEW_MESSAGE_BODY'
 const SEND_MESSAGE = 'SEND_MESSAGE'
+
+//----------------------------------------------------------------------------------------------------------------------
+
+type SendMessageCreatorType = {
+    type: typeof SEND_MESSAGE
+}
+
+type UpdateNewMessageBodyCreatorType = {
+    type: typeof UPDATE_NEW_MESSAGE_BODY
+    body: string
+}
+
+type DialogReducerActionsType = SendMessageCreatorType | UpdateNewMessageBodyCreatorType
+
+type InitStateType = typeof initialState
+
+//----------------------------------------------------------------------------------------------------------------------
 
 let initialState = {
     messagesData: [
@@ -21,19 +37,9 @@ let initialState = {
     newMessageBody: ''
 }
 
-type SendMessageCreatorType = {
-    type: typeof SEND_MESSAGE
-}
-type UpdateNewMessageBodyCreatorType = {
-    type: typeof UPDATE_NEW_MESSAGE_BODY
-    body: string
-}
+//----------------------------------------------------------------------------------------------------------------------
 
-type DialogReducerActionsType = SendMessageCreatorType | UpdateNewMessageBodyCreatorType
-
-type InitStateType = typeof initialState
-
-const dialogsReducer = (state:InitStateType = initialState, action:any): InitStateType => {
+const dialogsReducer = (state:InitStateType = initialState, action:DialogReducerActionsType): InitStateType => {
     switch (action.type) {
         case UPDATE_NEW_MESSAGE_BODY:
             state.newMessageBody = action.body
@@ -46,7 +52,11 @@ const dialogsReducer = (state:InitStateType = initialState, action:any): InitSta
     }
 }
 
+//----------------------------------------------------------------------------------------------------------------------
+
 export const sendMessageCreator = (): DialogReducerActionsType => ({type: SEND_MESSAGE})
-export const updateNewMessageBodyCreator = (body:string): DialogReducerActionsType => ({type: UPDATE_NEW_MESSAGE_BODY, body: body})
+export const updateNewMessageBody = (body:string): DialogReducerActionsType => ({type: UPDATE_NEW_MESSAGE_BODY, body: body})
+
+//----------------------------------------------------------------------------------------------------------------------
 
 export default dialogsReducer
