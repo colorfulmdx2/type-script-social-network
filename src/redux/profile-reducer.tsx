@@ -18,6 +18,8 @@ type ProfileType = {
 
 type AddPostType = {
     type: typeof ADD_POST
+    postBody: string
+
 }
 
 type UpdateNewPostTextType = {
@@ -49,7 +51,6 @@ let initialState = {
         {id: 2, like: '16', message: 'Learning React....'},
         {id: 3, like: '19', message: 'Fucked up...'}
     ],
-    newPostText: '',
     profile: null,
     status: ''
 }
@@ -61,12 +62,11 @@ const profileReducer = (state: InitStateType = initialState, action: ProfileRedu
         case ADD_POST:
             let newPost = {
                 id: 4,
-                message: state.newPostText,
+                message: action.postBody,
                 like: '0'
             }
-            return {...state, newPostText: '', postData: [newPost, ...state.postData]}
-        case UPDATE_NEW_POST_TEXT :
-            return {...state, newPostText: action.newText}
+            return {...state, postData: [newPost, ...state.postData]}
+
         case SET_USER_PROFILE:
             return {...state, profile: action.profile}
         case SET_STATUS:
@@ -78,9 +78,10 @@ const profileReducer = (state: InitStateType = initialState, action: ProfileRedu
 
 //----------------------------------------------------------------------------------------------------------------------
 
-export const addPost = ():ProfileReducerActionsType => {
+export const addPost = (postBody: string):ProfileReducerActionsType => {
     return {
-        type: ADD_POST
+        type: ADD_POST,
+        postBody
     }
 }
 export const updateNewPostText = (text: string):ProfileReducerActionsType => {

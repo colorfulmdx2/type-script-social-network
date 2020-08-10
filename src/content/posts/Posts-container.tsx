@@ -12,14 +12,13 @@ import {AppStateType} from "../../redux/redux-store";
 
 let mapStateToProps = (state: AppStateType) => {
     return {
-        newPostText: state.profileState.newPostText,
         postData: state.profileState.postData
     }
 }
 let mapDispatchToProps = (dispatch:any) => {
     return {
-        addPostHandler: () => {
-            dispatch(addPost())
+        addPostHandler: (postBody: string) => {
+            dispatch(addPost(postBody))
         },
         updateNewPostTextHandler: (text:string) => {
             let action = updateNewPostText(text)

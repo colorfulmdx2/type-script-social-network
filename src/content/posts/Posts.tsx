@@ -1,34 +1,41 @@
 import React from 'react';
 import stylePosts from "./Posts.module.css";
 import AddedPost from "./added-posts/AddedPost";
+import {Field, InjectedFormProps, reduxForm} from "redux-form";
+import {maxLength30, maxLengthCreator, required} from "../../../src/utils/validators/validators"
+import {Textarea} from "../../components/common/Forms-Control/FormsControls";
 
 
-/*
-type postsType = {
-    addPost: () => void
-    newPostText: () => void
-    dispatch: () => void
-    title: string
+type PostFormDataType = {
+    postBody: string
 }
-*/
 
+let maxLength10 = maxLengthCreator(10)
 
+const AddPostForm: React.FC<InjectedFormProps<PostFormDataType>> = (props) => {
+    return (
+        <form onSubmit={props.handleSubmit}>
+            <div>
+                <Field placeholder={'post body'}
+                       name={'postBody'}
+                       component={Textarea}
+                       validate={[required, maxLength10]}
+                />
+            </div>
+            <div>
+                <button>ADD</button>
+            </div>
+        </form>
+    )
+}
 
+const AddPostReduxForm = reduxForm<PostFormDataType>({form: 'addPost'}) (AddPostForm)
 
 const Posts = (props: any) => {
 
-    let newPostElement: any = React.createRef()
-
-    let addPostHandler = () => {
-        props.addPostHandler()
+    let addPostHandler = (values: PostFormDataType) => {
+        props.addPostHandler(values.postBody)
     }
-
-    let onPostChangeHandler = () => {
-        let text = newPostElement.current.value
-        props.updateNewPostTextHandler(text)
-
-    }
-
 
     let addedPosts = props.postData.map((element: { id: number; like: string; message: string; }) =>
         <AddedPost id={element.id} like={element.like} message={element.message}/>)
@@ -38,13 +45,7 @@ const Posts = (props: any) => {
         <div className={stylePosts.posts}>
             <div className={stylePosts.addPosts}>
                 <h2>{props.title}</h2>
-                <textarea ref={newPostElement}
-                          value={props.newPostText}
-                          onChange={onPostChangeHandler}
-                />
-            </div>
-            <div className={stylePosts.buttonWrapper}>
-                <input onClick={addPostHandler} type='button' value='Send' className={stylePosts.button}/>
+                <AddPostReduxForm onSubmit={addPostHandler}/>
             </div>
             {addedPosts}
         </div>
