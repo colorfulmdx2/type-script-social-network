@@ -1,6 +1,8 @@
 import {authAPI} from "../api/api";
 import {ThunkAction} from "redux-thunk";
 import {AppStateType} from "./redux-store";
+import {stopSubmit} from "redux-form";
+import {FormAction} from "redux-form/lib/actions";
 
 const SET_USER_DATA = 'SET_USER_DATA'
 
@@ -29,7 +31,7 @@ type SetAuthUserDataActionType = {
 
 type AuthUserDataActionType = SetAuthUserDataActionType
 
-export type ThunkActionType = ThunkAction<Promise<void>, AppStateType, unknown, AuthUserDataActionType>
+export type ThunkActionType = ThunkAction<Promise<void>, AppStateType, unknown, AuthUserDataActionType | FormAction>
 
 type InitStateType = {
     id: null | number
@@ -86,6 +88,12 @@ export const login = (email: string, password: string, rememberMe: boolean):Thun
             .then((response: any) => {
                 if (response.data.resultCode === 0) {
                    dispatch(getAuthUserData())
+                } else {
+                    let message = response.data.messages.length > 0
+                        ? response.data.messages[0]
+                        : 'Some Error'
+
+                    dispatch(stopSubmit('login', {_error: message}))
                 }
             })
     )
