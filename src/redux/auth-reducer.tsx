@@ -17,7 +17,7 @@ let initialState = {
 //----------------------------------------------------------------------------------------------------------------------
 
 type PayloadType = {
-    userId: number | null
+    id: number | null
     email: string | null
     login: string | null
     isAuth: boolean
@@ -55,11 +55,11 @@ const authReducer = (state: InitStateType = initialState, action: SetAuthUserDat
 
 //----------------------------------------------------------------------------------------------------------------------
 
-export const setAuthUserData = (userId: number | null | null, email: string | null | null, login: string | null | null, isAuth: boolean): AuthUserDataActionType => (
+export const setAuthUserData = (id: number | null , email: string  | null, login: string  | null, isAuth: boolean): AuthUserDataActionType => (
     {
         type: SET_USER_DATA,
         payload: {
-            userId,
+            id,
             email,
             login,
             isAuth
@@ -78,6 +78,8 @@ export const getAuthUserData = ():ThunkActionType => async (dispatch) => {
                     dispatch(setAuthUserData(id, email, login, true))
                 }
             })
+            .catch( (err)=> {
+            } )
     )
 }
 

@@ -44,6 +44,14 @@ class MyPageContainer extends React.Component<PropsType> {
 
 }
 
+// let mapStateToProps = (state: AppStateType) => {
+//     return ({
+//         profile: state.profileState.profile,
+//         status: state.profileState.status,
+//         autorizedUserId: state.auth.id,
+//         isAuth: state.auth.isAuth
+//     })
+// }
 let mapStateToProps = (state: AppStateType) => {
     return ({
         profile: state.profileState.profile,

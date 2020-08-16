@@ -108,9 +108,9 @@ export const getUserProfile = (userId: number):ThunkActionType => async (dispatc
     )
 }
 
-export const getStatus = (userId: number):ThunkActionType => async (dispatch) => {
+export const getStatus = (id: number):ThunkActionType => async (dispatch) => {
     return  (
-        profileAPI.getStatus(userId)
+        profileAPI.getStatus(id)
             .then((response: any) => {
                 dispatch(setStatus(response.data))
             })

@@ -9,6 +9,12 @@ import {
 import {AppStateType} from "../redux/redux-store";
 import Users from "./Users";
 import Preloader from "../components/common/Preloader/Preloader";
+import {
+    getCurrentPageSelector, getFollowingInProgressSelector, getIsFetchingSelector,
+    getPageSizeSelector,
+    getTotalUsersCountSelector,
+    getUsersSelector
+} from "../redux/users-selectors";
 
 export type UsersPropsDispatch = {
     follow: (userId: number) => void
@@ -52,12 +58,12 @@ class UsersContainer extends React.Component<ReturnType<typeof mapStateToProps> 
 
 let mapStateToProps = (state: AppStateType) => {
     return {
-        users: state.usersState.users,
-        pageSize: state.usersState.pageSize,
-        totalUsersCount: state.usersState.totalUsersCount,
-        currentPage: state.usersState.currentPage,
-        isFetching: state.usersState.isFetching,
-        followingInProgress: state.usersState.followingInProgress
+        users: getUsersSelector(state),
+        pageSize: getPageSizeSelector(state),
+        totalUsersCount: getTotalUsersCountSelector(state),
+        currentPage: getCurrentPageSelector(state),
+        isFetching: getIsFetchingSelector(state),
+        followingInProgress: getFollowingInProgressSelector(state)
     }
 }
 
