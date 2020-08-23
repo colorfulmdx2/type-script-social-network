@@ -23,9 +23,18 @@ export type UsersPropsDispatch = {
     toggleFollowingProgress: (isFetching: boolean, userId: any) => void
     getUsers: (currentPage: number, pageSize: number) => any
 }
+export type UsersStatePropsType = ReturnType<typeof mapStateToProps>
+
+export type OnChangeType = {
+    onPageChanged: (pageNumber: number) => void
+}
 
 
-class UsersContainer extends React.Component<ReturnType<typeof mapStateToProps> & UsersPropsDispatch, {}> {
+
+export type UsersPropsType = UsersStatePropsType & UsersPropsDispatch
+
+
+class UsersContainer extends React.Component<UsersPropsType> {
 
     componentDidMount(): void {
         this.props.getUsers(this.props.currentPage, this.props.pageSize)
@@ -72,6 +81,7 @@ export default connect(mapStateToProps, {
         unFollow,
         setCurrentPage,
         toggleFollowingProgress,
-        getUsers
+        getUsers,
+
     }
-)(UsersContainer);
+)(UsersContainer)

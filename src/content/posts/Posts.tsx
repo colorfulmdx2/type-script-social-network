@@ -2,7 +2,7 @@ import React from 'react';
 import stylePosts from "./Posts.module.css";
 import AddedPost from "./added-posts/AddedPost";
 import {Field, InjectedFormProps, reduxForm} from "redux-form";
-import {maxLength30, maxLengthCreator, required} from "../../../src/utils/validators/validators"
+import {maxLengthCreator, required} from "../../../src/utils/validators/validators"
 import {Textarea} from "../../components/common/Forms-Control/FormsControls";
 
 
@@ -31,7 +31,7 @@ const AddPostForm: React.FC<InjectedFormProps<PostFormDataType>> = (props) => {
 
 const AddPostReduxForm = reduxForm<PostFormDataType>({form: 'addPost'}) (AddPostForm)
 
-const Posts = (props: any) => {
+const Posts = React.memo((props: any) => {
 
     let addPostHandler = (values: PostFormDataType) => {
         props.addPostHandler(values.postBody)
@@ -51,6 +51,6 @@ const Posts = (props: any) => {
         </div>
 
     )
-}
+})
 
 export default Posts;
