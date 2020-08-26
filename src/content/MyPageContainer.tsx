@@ -2,7 +2,7 @@ import React from 'react';
 import MyPage from "./MyPage";
 import {connect} from "react-redux";
 import {AppStateType} from "../redux/redux-store";
-import {getStatus, getUserProfile, savePhoto, updateStatus} from "../redux/profile-reducer";
+import {getStatus, getUserProfile, savePhoto, saveProfile, updateStatus} from "../redux/profile-reducer";
 import {withRouter, RouteComponentProps} from "react-router-dom";
 import {compose} from "redux";
 
@@ -13,7 +13,8 @@ export type ProfilePropsDispatchType = {
     getUserProfile: (userId: any) => void
     getStatus: (userId: any) => void
     updateStatus: (status: string) => void
-    savePhoto: (arg:any) => any
+    savePhoto: (arg: any) => any
+    saveProfile: (arg: any) => void
 }
 export type ProfilePropsStateType = ReturnType<typeof mapStateToProps>
 
@@ -23,7 +24,7 @@ type PropsType = RouteComponentProps<PathParamsType> & ProfileCommonStatePropsTy
 
 class MyPageContainer extends React.Component<PropsType> {
 
-    refreshProfile () {
+    refreshProfile() {
         let userId = this.props.match.params.userId
         if (!userId) {
             userId = this.props.autorizedUserId
@@ -38,7 +39,7 @@ class MyPageContainer extends React.Component<PropsType> {
 
     componentDidUpdate(prevProps: Readonly<PropsType>, prevState: Readonly<{}>, snapshot?: any): void {
         if (this.props.match.params.userId !== prevProps.match.params.userId)
-        this.refreshProfile()
+            this.refreshProfile()
     }
 
     render() {
@@ -50,6 +51,7 @@ class MyPageContainer extends React.Component<PropsType> {
                 status={this.props.status}
                 updateStatus={this.props.updateStatus}
                 savePhoto={this.props.savePhoto}
+                saveProfile={this.props.saveProfile}
             />
         )
     }
@@ -66,9 +68,15 @@ let mapStateToProps = (state: AppStateType) => {
 }
 
 export default compose(
-    connect(mapStateToProps, {getUserProfile, getStatus, updateStatus, savePhoto}),
+    connect(mapStateToProps, {
+        getUserProfile,
+        getStatus,
+        updateStatus,
+        savePhoto,
+        saveProfile
+    }),
     withRouter,
-   )(MyPageContainer) as React.ComponentClass
+)(MyPageContainer) as React.ComponentClass
 
 
 

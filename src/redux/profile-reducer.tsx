@@ -1,6 +1,8 @@
 import {profileAPI, usersAPI} from "../api/api";
 import {ThunkAction} from "redux-thunk";
 import {AppStateType} from "./redux-store";
+import {stopSubmit} from "redux-form";
+import {FormAction} from "redux-form/lib/actions";
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -55,7 +57,7 @@ type ProfileReducerActionsType = AddPostType
     | DeletePostActionType
     | PhotoSuccessActionType
 
-type ThunkActionType = ThunkAction<Promise<void>, AppStateType, unknown, ProfileReducerActionsType>
+type ThunkActionType = ThunkAction<Promise<void>, AppStateType, unknown, ProfileReducerActionsType | FormAction>
 
 type InitStateType = typeof initialState
 
@@ -72,19 +74,22 @@ let initialState = {
             small: 'dsfdsf',
             large: 'dsfdsf'
         },
+        aboutMe: null,
         userId: null,      //required(integer)
         lookingForAJob: null,     //required(boolean)
         lookingForAJobDescription: null,     //required(string)
         fullName: null,     //required(string)
-        contacts: null,     //required(object)
-        github: null,     //required(string)
-        vk: null,     //required(string)
-        facebook: null,     //required(string)
-        instagram: null,     //required(string)
-        twitter: null,     //required(string)
-        website: null,     //required(string)
-        youtube: null,     //required(string)
-        mainLink: null,     //required(string)
+        contacts: {
+            github: null,     //required(string)
+            vk: null,     //required(string)
+            facebook: null,     //required(string)
+            instagram: null,     //required(string)
+            twitter: null,     //required(string)
+            website: null,     //required(string)
+            youtube: null,     //required(string)
+            mainLink: null
+        },     //required(object)
+          //required(string)
 },
     status: ''
 }
@@ -139,7 +144,7 @@ export const deletePost = (postId: number): DeletePostActionType => ({type: DELE
 export const savePhotoSuccess = (photos: any): PhotoSuccessActionType => ({type: PHOTO_SUCCESS, photos})
 //----------------------------------------------------------------------------------------------------------------------
 
-export const getUserProfile = (userId: number): ThunkActionType => async (dispatch) => {
+export const getUserProfile = (userId: number | null): ThunkActionType => async (dispatch) => {
 
     let response = await usersAPI.getProfile(userId)
 
@@ -168,6 +173,18 @@ export const savePhoto = (file: any): ThunkActionType => async (dispatch) => {
 
     if (response.data.resultCode === 0) {
         dispatch(savePhotoSuccess(response.data.data.photos))
+    }
+}
+export const saveProfile = (profile: any): ThunkActionType => async (dispatch, getState) => {
+    const id = getState().auth.id
+    const response = await profileAPI.saveProfile(profile)
+
+    if (response.data.resultCode === 0) {
+        dispatch(getUserProfile(id))
+    } else {
+        dispatch(stopSubmit('edit-profile', {_error: response.data.messages[0]}))
+        //{'contacts':{'facebook': response.data.messages[0]} }
+        return Promise.reject(response.data.messages[0])
     }
 }
 
