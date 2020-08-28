@@ -3,7 +3,7 @@ import './App.css';
 import './container/container.css'
 import Navigation from "./navigation/Navigation";
 import Messages from "./messages/Messages";
-import {Route, withRouter} from "react-router-dom";
+import {Route, withRouter, Redirect} from "react-router-dom";
 import Music from "./music/Music";
 import Setting from "./setting/Setting";
 import UsersContainer from "./users/UsersContainer";
@@ -15,6 +15,7 @@ import {compose} from "redux";
 import {AppStateType} from "./redux/redux-store";
 import {initializeApp} from "./redux/app-reducer";
 import Preloader from "./components/common/Preloader/Preloader";
+import WithAuthRedirect from "./HOC/WithAuthRedirect";
 
 
 type MapDispatchToPropsType = {
@@ -42,6 +43,7 @@ class App extends React.Component<AppPropsType> {
                 <HeaderContainer/>
                 {/*              <Navigation friendIconData={props.state.navigationReducer.friendIconData}/>*/}
                 <Navigation/>
+                <Route path='/' render={() => <Redirect to={"/profile"}/> }/>
                 <Route path='/dialogs' render={() => <Messages/>}/>
                 <Route path='/profile/:userId?' render={() => <MyPageContainer/>}/>
                 <Route path='/users' render={() => <UsersContainer/>}/>

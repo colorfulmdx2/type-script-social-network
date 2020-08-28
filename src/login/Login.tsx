@@ -13,19 +13,22 @@ type FormDataType = {
     email: string
     password: string
     rememberMe: boolean
+    captcha: string
 }
 type LoginMapDispatchToPropsType = {
     login: any
+
 }
 type mapStateToPropsType = {
     isAuth: boolean
+    captchaUrl: null | string
 }
 type PropsType = LoginMapDispatchToPropsType & mapStateToPropsType
 
 const Login = (props: PropsType) => {
 
     const onSubmit = (formData: FormDataType) => {
-        props.login(formData.email, formData.password, formData.rememberMe)
+        props.login(formData.email, formData.password, formData.rememberMe, formData.captcha)
     }
 
     if (props.isAuth) {
@@ -35,14 +38,16 @@ const Login = (props: PropsType) => {
     return (
         <div>
             <h1>LOGIN</h1>
-            <LoginReduxForm onSubmit={onSubmit}/>
+            <LoginReduxForm onSubmit={onSubmit}
+                            captchaUrl={props.captchaUrl || ''}
+            />
         </div>
     )
 }
 
 let maxLength30 = maxLengthCreator(30)
 
-const LoginForm: React.FC<InjectedFormProps<FormDataType>> = ({handleSubmit, error}) => {
+const LoginForm: React.FC<InjectedFormProps<FormDataType, {captchaUrl:string}> & {captchaUrl:string}> = ({handleSubmit, error, captchaUrl}) => {
     return (
         <form onSubmit={handleSubmit}>
             <div>
@@ -68,6 +73,16 @@ const LoginForm: React.FC<InjectedFormProps<FormDataType>> = ({handleSubmit, err
                     {error}
                 </div>
             }
+            {
+                error && <img src={captchaUrl}/>
+            }
+            {
+                error && <Field placeholder={'Type the symbols'}
+                                name={'captcha'}
+                                component={Input}
+                                validate={[required]}
+                />
+            }
             <div>
                 <button>Login</button>
             </div>
@@ -76,8 +91,10 @@ const LoginForm: React.FC<InjectedFormProps<FormDataType>> = ({handleSubmit, err
 }
 
 const mapStateToProps = (state: AppStateType) => ({
+    captchaUrl: state.auth.captchaUrl,
     isAuth: state.auth.isAuth
 })
 
-const LoginReduxForm = reduxForm<FormDataType>({form: 'login'})(LoginForm)
+const LoginReduxForm = reduxForm<FormDataType, {captchaUrl:string}>({form: 'login'})(LoginForm)
+
 export default connect(mapStateToProps, {login})(Login)
