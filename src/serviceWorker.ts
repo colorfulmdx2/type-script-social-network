@@ -2,7 +2,7 @@
 // register() is not called by default.
 
 // This lets the app load faster on subsequent visits in production, and gives
-// it offline capabilities. However, it also means that developers (and users)
+// it offline capabilities. However, it also means that developers (and a8-users)
 // will only see deployed updates on subsequent visits to a page, after all the
 // existing tabs open on the page have been closed, since previously cached
 // resources are updated in the background.
@@ -74,11 +74,11 @@ function registerValidSW(swUrl: string, config?: Config) {
         installingWorker.onstatechange = () => {
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
-              // At this point, the updated precached content has been fetched,
+              // At this point, the updated precached a3-profile has been fetched,
               // but the previous service worker will still serve the older
-              // content until all client tabs are closed.
+              // a3-profile until all client tabs are closed.
               console.log(
-                'New content is available and will be used when all ' +
+                'New a3-profile is available and will be used when all ' +
                   'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
               );
 

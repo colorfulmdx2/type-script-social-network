@@ -1,0 +1,99 @@
+
+.aboutContainer {
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+
+  .button {
+    height: 30px;
+    width: 60px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+    margin: 10px auto 0 auto;
+    color: white;
+    display: block;
+    &:hover {
+      background-color: #3bb78f;
+      background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+    }
+  }
+
+  .status:after {
+    margin-top: 10px;
+    display: block;
+    background: #edeef0;
+    height: 1px;
+    width: 100%;
+    content: '';
+
+
+  }
+
+
+  .nameContainer {
+    display: flex;
+    justify-content: space-between;
+
+    .name {
+      font-size: 30px;
+    }
+
+
+    .online {
+      font-size: 12px;
+      color: gray;
+    }
+  }
+
+  .mainInfo {
+    .about {
+      .contacts {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        align-items: center;
+        & img {
+          height: 50px;
+          display: block;
+          box-sizing: border-box;
+          &:hover {
+            height: 51px;
+            transition: all ease-in 0.1s;
+          }
+        }
+      }
+      .descriptionsContainer {
+        margin: 30px 0 30px 0;
+        font-size: 15px;
+        display: flex;
+
+        .title {
+          width: 20%;
+          color: gray;
+        }
+
+        .text {
+          width: 80%;
+
+        }
+
+      }
+    }
+  }
+
+}
+
+.after::after {
+  margin-top: 10px;
+  display: block;
+  background: #edeef0;
+  height: 1px;
+  width: 100%;
+  content: '';
+
+}

@@ -1,0 +1,37 @@
+.container {
+
+    width: 100%;
+
+    box-sizing: border-box;
+    .users {
+        background: white;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+        box-sizing: border-box;
+        margin-left: 30px;
+        padding: 20px;
+        .line {
+            &:after {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                display: block;
+                background: #edeef0;
+                height: 1px;
+                width: 100%;
+                content: '';
+            }
+        }
+
+    }
+
+}
+
+.commonContainer {
+    width: 100%;
+    .usersContainer {
+
+    }
+    .paginator {
+        margin-top: 80px;
+    }
+}

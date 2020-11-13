@@ -1,10 +1,11 @@
-import preLoader from "../../../assets/images/loader.gif";
+import preloader from "./Preloader-image/preloaderPurple.gif"
 import React from "react";
+import style from './Preloader.module.scss'
 
-let Preloader = (props:any) => {
+let Preloader = () => {
     return (
-        <div>
-             <img src={preLoader}/>
+        <div className={style.preloader}>
+             <img src={preloader}/>
         </div>
     )
 }

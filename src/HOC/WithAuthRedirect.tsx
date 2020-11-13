@@ -9,7 +9,7 @@ let mapStateToPropsForRedirect = (state: AppStateType) => {
     })
 }
 
-let WithAuthRedirect = (Component:any) => {
+export const WithAuthRedirect = (Component:any) => {
                     //types
     class RedirectComponent extends React.Component<any, any> {
         render() {

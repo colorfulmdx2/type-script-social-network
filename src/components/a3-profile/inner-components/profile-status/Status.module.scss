@@ -1,0 +1,40 @@
+@import '../../../../sass/variables';
+
+.container {
+  position: relative;
+  .text {
+    display: block;
+    border-radius: 5px;
+    padding-left: 10px;
+    &:hover {
+      background: rgba(106, 115, 223, .1);
+    }
+    .defaultText {
+      color: gray;
+    }
+  }
+
+  .inputContainer {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: block;
+    width: 100%;
+    background: whitesmoke;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 20px;
+
+    .input {
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      font-size: 17px;
+      padding: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+}

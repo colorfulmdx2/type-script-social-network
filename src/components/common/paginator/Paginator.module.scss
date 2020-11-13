@@ -1,0 +1,52 @@
+
+.paginator {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  margin: 20px auto 20px auto;
+
+  padding: 5px;
+  height: 50px;
+  width: 75%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    display: block;
+    background: inherit;
+    border: none;
+    outline: none;
+    color: gray;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  .container {
+    display: flex;
+  }
+}
+
+.pageNumber {
+  display: block;
+  height: 40px;
+  width: 40px;
+  margin: 0 5px 0 5px;
+  color: gray;
+  text-align: center;
+  padding-top: 7px;
+  box-sizing: border-box;
+  border-radius: 50%;
+
+  &:hover {
+    background: black;
+    opacity: .7;
+    color: white;
+    transition: all ease-in .1s;
+  }
+}
+
+.pageNumber.selectedPage {
+  background: black;
+  color: white;
+}

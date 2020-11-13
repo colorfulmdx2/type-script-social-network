@@ -1,13 +1,11 @@
 import {getAuthUserData, ThunkActionType} from "./auth-reducer";
 
-const INITIALIZED_SUCCESS = 'INITIALIZED_SUCCESS'
+
 //----------------------------------------------------------------------------------------------------------------------
 type InitStateType = {
     initialized: boolean
 }
-type InitializedActionType = {
-    type: 'INITIALIZED_SUCCESS'
-}
+type InitializedActionType = ReturnType<typeof initializedSuccess>
 type ActionType = InitializedActionType
 //----------------------------------------------------------------------------------------------------------------------
 let initialState = {
@@ -26,15 +24,16 @@ export const appReducer = (state: InitStateType = initialState, action: ActionTy
 
 //----------------------------------------------------------------------------------------------------------------------
 
-export const initializedSuccess = ():InitializedActionType =>  ({type:INITIALIZED_SUCCESS})
+export const initializedSuccess = () =>  ({type:'INITIALIZED_SUCCESS'} as const)
 
 //----------------------------------------------------------------------------------------------------------------------
 
 export const initializeApp = ():ThunkActionType => async (dispatch) => {
-    const promise = dispatch(getAuthUserData())
-   Promise.all([promise]).then(() => {
-       dispatch(initializedSuccess())
-   })
+    await dispatch(getAuthUserData())
+    dispatch(initializedSuccess())
+   // Promise.all([promise]).then(() => {
+   //     dispatch(initializedSuccess())
+   // })
 }
 
 //----------------------------------------------------------------------------------------------------------------------

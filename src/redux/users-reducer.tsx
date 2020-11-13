@@ -22,6 +22,15 @@ export type LocationType = {
 }
 
 export type UsersType = {
+    followed: boolean
+    id: number
+    name: string
+    photos: {small: string, large: string}
+    status: string
+    uniqueUrlName: string
+}
+
+/*export type UsersType = {
     id: number
     followed: boolean
     name: string
@@ -29,7 +38,7 @@ export type UsersType = {
     location: LocationType
     photoUrl: string
     photos: any
-}
+}*/
 
 type FollowSuccessActionType = {
     type: typeof FOLLOW
@@ -99,7 +108,7 @@ const usersReducer = (state: InitStateType = initialState, action: UsersReducerA
             return {
                 ...state,
                 users: [
-                   // updateObjectInArray(state.users, action.userId, 'id', {followed: true})
+                   // updateObjectInArray(state.a8-users, action.userId, 'id', {followed: true})
                     ...state.users.map((u) => {
                     if (u.id === action.userId) {
                         return {...u, followed: true}
@@ -111,7 +120,7 @@ const usersReducer = (state: InitStateType = initialState, action: UsersReducerA
             return {
                 ...state,
                 users: [
-                    //updateObjectInArray(state.users, action.userId, 'id', {followed: false})
+                    //updateObjectInArray(state.a8-users, action.userId, 'id', {followed: false})
                     ...state.users.map((u) => {
                     if (u.id === action.userId) {
                         return {...u, followed: false}
@@ -168,6 +177,7 @@ export const getUsers = (page: number, pageSize: number): ThunkActionType => asy
     dispatch(setCurrentPage(page))
 
     let data = await usersAPI.getUsers(page, pageSize)
+    console.log(data)
 
     dispatch(setIsFetching(false))
     dispatch(setUsers(data.items))

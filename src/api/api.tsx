@@ -1,6 +1,22 @@
 import axios from "axios";
 
 
+const corseFree = 'https://cors-anywhere.herokuapp.com/'
+
+const instanceNews = axios.create({
+    baseURL: `${corseFree}https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=69c53b6ef0414fbb8941b1b333cea919`,
+    headers: {
+        'api-key': '69c53b6ef0414fbb8941b1b333cea919'
+    }
+});
+
+export const newsAPI = {
+    getnews() {
+        return instanceNews.get('')
+    }
+}
+
+
 const instance = axios.create({
     withCredentials: true,
     headers: {
@@ -14,6 +30,18 @@ export const usersAPI = {
         return instance.get(`users?page=${currentPage}&count=${pageSize}`)
             .then(response => {
                 return response.data
+            })
+    },
+    getFriends(pageSize = 6) {
+        return instance.get(`users?count=${pageSize}`)
+            .then(response => {
+                return response.data.items
+            })
+    },
+    getOnlineFriends(pageSize = 4) {
+        return instance.get(`users?count=${pageSize}`)
+            .then(response => {
+                return response.data.items
             })
     },
     follow(id: any) {
@@ -54,7 +82,7 @@ export const profileAPI = {
             }
         )
     },
-    saveProfile(profile:any) {
+    saveProfile(profile: any) {
         return instance.put(`profile/`, profile)
     }
 }
@@ -66,7 +94,7 @@ export const authAPI = {
     },
     login(email: string, password: string, rememberMe: boolean, captcha: string | null) {
         return instance.post(`auth/login`,
-            {email, password, rememberMe})
+            {email, password, rememberMe, captcha})
     },
     logout() {
         return instance.delete(`auth/login`,)

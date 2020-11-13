@@ -3,6 +3,8 @@ import {ThunkAction} from "redux-thunk";
 import {AppStateType} from "./redux-store";
 import {stopSubmit} from "redux-form";
 import {FormAction} from "redux-form/lib/actions";
+import {initializedSuccess} from "./app-reducer";
+import {getUserProfile} from "./profile-reducer";
 
 const SET_USER_DATA = 'SET_USER_DATA'
 const GET_CAPTCHA_URL_SUCCESS = 'GET_CAPTCHA_URL_SUCCESS'
@@ -89,17 +91,20 @@ export const getCaptchaUrlSuccess = (captchaUrl:string) => ({
 export const getAuthUserData = (): ThunkActionType => async (dispatch) => {
 
     let response = await authAPI.me()
+    //debugger
 
     if (response.data.resultCode === 0) {
         let {id, email, login} = response.data.data
-        dispatch(setAuthUserData(id, email, login, true))
+       await dispatch(setAuthUserData(id, email, login, true))
+       await  dispatch(getUserProfile(id))
     }
+
 //     return (
 //         authAPI.me()
-//             .then((response: any) => {
-//                 if (response.data.resultCode === 0) {
-//                     let {id, email, login} = response.data.data
-//                     dispatch(setAuthUserData(id, email, login, true))
+// //             .then((response: any) => {
+// //                 if (response.data.resultCode === 0) {
+// //                     let {id, email, a1-login} = response.data.data
+// //                     dispatch(setAuthUserData(id, email, a1-login, true))
 //                 }
 //             })
 //             .catch( (err)=> {
@@ -121,25 +126,26 @@ export const login = (email: string, password: string, rememberMe: boolean, capt
             ? response.data.messages[0]
             : 'Some Error'
 
-        dispatch(stopSubmit('login', {_error: message}))
+        dispatch(stopSubmit('login', {error: message}))
     }
 
     // return (
-    //     authAPI.login(email, password, rememberMe)
+    //     authAPI.a1-login(email, password, rememberMe)
     //         .then((response: any) => {
     //             if (response.data.resultCode === 0) {
     //                dispatch(getAuthUserData())
     //             } else {
-    //                 let message = response.data.messages.length > 0
-    //                     ? response.data.messages[0]
+    //                 let message = response.data.a4-messages.length > 0
+    //                     ? response.data.a4-messages[0]
     //                     : 'Some Error'
     //
-    //                 dispatch(stopSubmit('login', {_error: message}))
+    //                 dispatch(stopSubmit('a1-login', {_error: message}))
     //             }
     //         })
     // )
 }
 export const getCaptchaUrl = (): ThunkActionType => async (dispatch) => {
+
     const response = await securityAPI.getCaptchaUrl()
     const dataUrl = response.data.url
     dispatch(getCaptchaUrlSuccess(dataUrl))

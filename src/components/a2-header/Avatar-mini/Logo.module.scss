@@ -1,0 +1,20 @@
+.avatarContainer {
+    display: flex;
+    align-items: center;
+
+    .avatar {
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        border: 2px solid whitesmoke;
+        border-radius: 100px;
+        box-sizing: border-box;
+    }
+    .name {
+        color: whitesmoke;
+        font-weight: bold;
+        font-size: 15px;
+        margin-right: 10px;
+    }
+
+}

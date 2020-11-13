@@ -1,0 +1,21 @@
+@import '../../../../sass/variables';
+
+.container {
+
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+
+  .row1 {
+    width: 30%;
+    margin-left: 30px;
+  }
+
+  .row2 {
+    width: 70%;
+    margin-left: 30px;
+  }
+}
+
+
+

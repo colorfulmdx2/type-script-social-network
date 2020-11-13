@@ -3,6 +3,7 @@ import {ThunkAction} from "redux-thunk";
 import {AppStateType} from "./redux-store";
 import {stopSubmit} from "redux-form";
 import {FormAction} from "redux-form/lib/actions";
+import {UsersType} from "./users-reducer";
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -47,8 +48,12 @@ type DeletePostActionType = {
 }
 type PhotoSuccessActionType = {
     type: typeof PHOTO_SUCCESS
-    photos: any
+    photos: PhotoType
 }
+
+type SetFriendsType = ReturnType<typeof setFriends>
+type SetOnlineFriendsType = ReturnType<typeof setOnlineFriends>
+type setMyProfileType = ReturnType<typeof setMyProfile>
 
 type ProfileReducerActionsType = AddPostType
     | UpdateNewPostTextType
@@ -56,12 +61,39 @@ type ProfileReducerActionsType = AddPostType
     | SetStatusProfileType
     | DeletePostActionType
     | PhotoSuccessActionType
+    | SetFriendsType
+    | SetOnlineFriendsType
+| setMyProfileType
+
 
 type ThunkActionType = ThunkAction<Promise<void>, AppStateType, unknown, ProfileReducerActionsType | FormAction>
 
 type InitStateType = typeof initialState
 
 //----------------------------------------------------------------------------------------------------------------------
+export type PhotoType = {
+    small: string | null,
+    large: string | null
+}
+export type ProfileFullType = {
+    photos: PhotoType,
+    aboutMe: string
+    userId: number     //required(integer)
+    lookingForAJob: boolean     //required(boolean)
+    lookingForAJobDescription: string     //required(string)
+    fullName: string    //required(string)
+    contacts: {
+        github: string    //required(string)
+        vk: string     //required(string)
+        facebook: string     //required(string)
+        instagram: string     //required(string)
+        twitter: string    //required(string)
+        website: string    //required(string)
+        youtube: string     //required(string)
+        mainLink: string
+    }    //required(object)
+    //required(string)
+}
 
 let initialState = {
     postData: [
@@ -69,35 +101,19 @@ let initialState = {
         {id: 2, like: '16', message: 'Learning React....'},
         {id: 3, like: '19', message: 'Fucked up...'}
     ],
-    profile: {
-        photos: {
-            small: 'dsfdsf',
-            large: 'dsfdsf'
-        },
-        aboutMe: null,
-        userId: null,      //required(integer)
-        lookingForAJob: null,     //required(boolean)
-        lookingForAJobDescription: null,     //required(string)
-        fullName: null,     //required(string)
-        contacts: {
-            github: null,     //required(string)
-            vk: null,     //required(string)
-            facebook: null,     //required(string)
-            instagram: null,     //required(string)
-            twitter: null,     //required(string)
-            website: null,     //required(string)
-            youtube: null,     //required(string)
-            mainLink: null
-        },     //required(object)
-          //required(string)
-},
-    status: ''
+    profile: null as ProfileFullType | null,
+    myProfile: null as ProfileFullType | null,
+    status: '',
+    friends: [] as UsersType[],
+    onlineFriends: [] as UsersType[]
 }
 
 //----------------------------------------------------------------------------------------------------------------------
 
 const profileReducer = (state: InitStateType = initialState, action: ProfileReducerActionsType): InitStateType => {
+
     switch (action.type) {
+
         case ADD_POST:
             let newPost = {
                 id: 4,
@@ -108,12 +124,18 @@ const profileReducer = (state: InitStateType = initialState, action: ProfileRedu
 
         case SET_USER_PROFILE:
             return {...state, profile: action.profile}
+        case "SET_MY_PROFILE":
+            return {...state, myProfile: action.profile}
         case SET_STATUS:
             return {...state, status: action.status}
         case "DELETE_POST":
             return {...state, postData: state.postData.filter(p => p.id !== action.postId)}
         case "PHOTO_SUCCESS":
-            return {...state, profile: {...state.profile, photos: action.photos}}
+            return {...state, profile: state.profile && {...state.profile, photos: action.photos}}
+        case "SET_FRIENDS":
+            return {...state, friends: action.value}
+        case "SET_ONLINE_FRIENDS":
+            return {...state, onlineFriends: action.value}
         default:
             return state
     }
@@ -133,15 +155,21 @@ export const updateNewPostText = (text: string): ProfileReducerActionsType => {
         newText: text
     }
 }
-export const setUserProfile = (profile: ProfileType): ProfileReducerActionsType => {
+export const setUserProfile = (profile: ProfileFullType): ProfileReducerActionsType => {
     return ({
         type: SET_USER_PROFILE, profile
     })
 }
+
+export const setMyProfile = (profile: ProfileFullType) => ({type: 'SET_MY_PROFILE', profile} as const)
+
 export const setStatus = (status: string): ProfileReducerActionsType => ({type: SET_STATUS, status})
 
 export const deletePost = (postId: number): DeletePostActionType => ({type: DELETE_POST, postId})
-export const savePhotoSuccess = (photos: any): PhotoSuccessActionType => ({type: PHOTO_SUCCESS, photos})
+export const savePhotoSuccess = (photos: PhotoType): PhotoSuccessActionType => ({type: PHOTO_SUCCESS, photos})
+
+export const setFriends = (value: UsersType[]) => ({type: 'SET_FRIENDS', value} as const)
+export const setOnlineFriends = (value: UsersType[]) => ({type: 'SET_ONLINE_FRIENDS', value} as const)
 //----------------------------------------------------------------------------------------------------------------------
 
 export const getUserProfile = (userId: number | null): ThunkActionType => async (dispatch) => {
@@ -149,6 +177,14 @@ export const getUserProfile = (userId: number | null): ThunkActionType => async 
     let response = await usersAPI.getProfile(userId)
 
     dispatch(setUserProfile(response.data))
+
+}
+
+export const getMyProfile = (): ThunkActionType => async (dispatch) => {
+
+    let response = await usersAPI.getProfile(8850)
+
+    dispatch(setMyProfile(response.data))
 
 }
 
@@ -177,15 +213,34 @@ export const savePhoto = (file: any): ThunkActionType => async (dispatch) => {
 }
 export const saveProfile = (profile: any): ThunkActionType => async (dispatch, getState) => {
     const id = getState().auth.id
+
     const response = await profileAPI.saveProfile(profile)
 
     if (response.data.resultCode === 0) {
         dispatch(getUserProfile(id))
     } else {
-        dispatch(stopSubmit('edit-profile', {_error: response.data.messages[0]}))
-        //{'contacts':{'facebook': response.data.messages[0]} }
-        return Promise.reject(response.data.messages[0])
+        console.log(response.data.messages[0])
+        /*dispatch(stopSubmit('edit-a3-profile', {_error: response.data.messages[0]}))
+        //{'contacts':{'facebook': response.data.a4-messages[0]} }
+        return Promise.reject(response.data.messages[0])*/
     }
+}
+
+export const getFriends = (): ThunkActionType => async (dispatch, getState) => {
+
+    try {
+        const friends = await usersAPI.getFriends()
+        const onlineFriends = await usersAPI.getOnlineFriends()
+
+
+        dispatch(setFriends(friends))
+        dispatch(setOnlineFriends(onlineFriends))
+
+    } catch (error) {
+        console.log(error)
+    }
+
+
 }
 
 export default profileReducer

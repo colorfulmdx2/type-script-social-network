@@ -1,0 +1,25 @@
+.after {
+  margin-bottom: 10px;
+  &:after {
+    margin-top: 10px;
+    display: block;
+    background: #edeef0;
+    height: 1px;
+    width: 100%;
+    content: '';
+  }
+  .dialog {
+    display: flex;
+    border-radius: 5px;
+
+    &:hover {
+      background: rgba(106, 115, 223, .1);
+    }
+    .avatar {
+      height: 80px;
+      display: block;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+}

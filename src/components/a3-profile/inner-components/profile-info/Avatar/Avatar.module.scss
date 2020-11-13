@@ -1,0 +1,86 @@
+.avatar {
+  height: 280px;
+  width: 250px;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  padding-top: 20px;
+  box-sizing: border-box;
+
+  & img {
+    height: 200px;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 3px;
+  }
+  .editButton {
+    display: block;
+    width: 80%;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+    margin: 10px auto 0 auto;
+    color: white;
+
+    &:hover {
+      background-color: #3bb78f;
+      background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+    }
+  }
+
+  .modalProfileContainer {
+    height: 400px;
+    position: relative;
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+      position: absolute;
+    }
+    .description {
+      position: absolute;
+      top: 18%;
+    }
+    .selectButton, .saveButton {
+      height: 30px;
+      width: 60px;
+      border: none;
+      border-radius: 3px;
+      outline: none;
+      background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+      margin: 10px auto 0 auto;
+      color: white;
+      position: absolute;
+      left: 46%;
+      bottom: 0;
+      &:hover {
+        background-color: #3bb78f;
+        background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+      }
+    }
+    .inputDetails {
+      & img {
+        height: 200px;
+        width: 200px;
+        border-radius: 100px;
+        position: absolute;
+        top: 35%;
+        left: 37%;
+      }
+    }
+    .size {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    .reminder {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      font-size: 10px;
+      color: grey;
+    }
+  }
+}

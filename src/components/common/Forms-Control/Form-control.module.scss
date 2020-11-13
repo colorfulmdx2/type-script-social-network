@@ -1,0 +1,121 @@
+
+.loginContainer {
+  width: 70vw;
+  height: 90vh;
+  margin: 40px auto;
+  text-align: center;
+  background: whitesmoke;
+  border-radius: 15px;
+  display: flex;
+  align-content: center;
+  .element {
+    width: 50%;
+    height: 100%;
+    &.image {
+      & img {
+        width: 400px;
+        margin-top: 200px;
+      }
+    }
+    &.form {
+      margin-top: 250px;
+      button {
+        font-size: 20px;
+        font-weight: bold;
+        width: 400px;
+        padding: 20px;
+        margin: 35px 10px 10px 10px;
+        border: 0;
+        border-radius: 100px;
+        background: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+        color: white;
+        outline: none;
+
+        &:hover {
+          background: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      .title {
+        margin-bottom: 30px;
+        font-weight: bold;
+        font-size: 30px;
+        color: #333333;
+        line-height: 1.2;
+      }
+    }
+
+
+  }
+
+
+
+}
+.formSummaryError {
+  border: 3px solid red;
+  padding: 5px;
+  color: green;
+}
+
+
+.formControl {
+  position: relative;
+  .icon {
+    position: absolute;
+    top: 32px;
+    left: 165px;
+  }
+  input {
+    box-sizing: border-box;
+    width: 400px;
+    font-size: 20px;
+    padding: 20px 20px 20px 80px;
+    margin: 10px;
+    border: 0;
+    border-radius: 100px;
+    background: #e6e6e6;
+    outline: none;
+    //box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+    //background-color: #edeef0;
+
+  }
+  &.error {
+    input,
+    textarea {
+      box-shadow: 0 0 6px red;
+    }
+    span {
+      color: red;
+    }
+  }
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 0;
+  -webkit-text-fill-color: #1f1f20;
+  -webkit-box-shadow: 0 0 0 1000px #e6e6e6 inset;
+  transition: background-color 5000s ease-in-out 0s;
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%);
+}
+
+//
+//
+//.formControl.error input,
+//.formControl.error textarea {
+//  border: 3px solid red;
+//}
+//
+//.formControl.error span {
+//  color: red;
+//}
+

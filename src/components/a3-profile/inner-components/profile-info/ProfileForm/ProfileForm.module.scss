@@ -1,0 +1,88 @@
+form {
+  padding: 30px;
+  ///height: 350px;
+  .element {
+    position: relative;
+    height: 80px;
+
+
+    &:after {
+      margin-top: 15px;
+      display: block;
+      background: #edeef0;
+      height: 1px;
+      width: 100%;
+      content: '';
+
+
+    }
+
+    .title {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+    }
+
+    .input {
+      margin-left: 300px;
+      border: none;
+      outline: none;
+      width: 300px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      background: white;
+      padding: 7px 7px 7px 20px;
+      box-sizing: border-box;
+      font-size: 15px;
+      //border-radius: 10px;
+      &:focus {
+        box-shadow: 0 0 5px rgba(101,125,237, 0.9);
+      }
+      &:hover {
+        box-shadow: 0 0 5px rgba(101,125,237, 0.9);
+      }
+    }
+    .checkbox {
+      margin-left: 300px;
+    }
+
+    textarea {
+      margin-left: 300px;
+      border: none;
+      outline: none;
+      width: 300px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      background: white;
+      padding: 7px 7px 7px 20px;
+      box-sizing: border-box;
+      font-size: 15px;
+     resize: none;
+      &:focus {
+        box-shadow: 0 0 5px rgba(101,125,237, 0.9);
+      }
+      &:hover {
+        box-shadow: 0 0 5px rgba(101,125,237, 0.9);
+      }
+    }
+
+
+  }
+  .button {
+    height: 30px;
+    width: 60px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+    margin: 10px auto 30px auto;
+    color: white;
+    position: absolute;
+    left: 46%;
+    bottom: 0;
+
+    &:hover {
+      background-color: #3bb78f;
+      background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+    }
+  }
+}
+

@@ -1,0 +1,62 @@
+.container {
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  margin-top: 30px;
+  .friends {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    &:after {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      display: block;
+      background: #edeef0;
+      height: 1px;
+      width: 100%;
+      content: '';
+    }
+  }
+  .onlineFriends{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+  }
+}
+
+
+
+.icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  img {
+    border-radius: 50%;
+    height: 60px;
+  }
+  .name {
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    overflow: hidden;
+  }
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+a {
+  width: 30%;
+  text-decoration: none;
+  color: black;
+}
